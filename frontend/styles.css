@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #e97b7b;
+    overflow: hidden;
+}
+
+.flex-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.flex-list li {
+    margin: 0 15px;
+}
+
+.hero {
+    --hero-bg: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMAGES/black-tan-corgi-smiling-2000-2a96b7bacf1b42d3889a2966afdf680e.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+} 
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    display: block;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.features .feature {
+    width: 30%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.testimonials {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #e97b7b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
