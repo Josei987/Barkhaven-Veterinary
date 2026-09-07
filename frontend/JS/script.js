@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const hero = document.querySelector('.hero');
+	const hero = document.querySelector('.pethero');
 	if (!hero) return;
 
 	// If you want to manage images from HTML, set a data-images attribute
