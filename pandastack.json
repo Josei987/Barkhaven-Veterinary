@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "backend",
-  "buildCommand": "./mvnw clean package -DskipTests",
-  "startCommand": "java -jar target/*.jar"
+  "buildtype": "docker",
+  "dockerfile": "Dockerfile"
 }
