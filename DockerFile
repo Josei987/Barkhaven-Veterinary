@@ -1,0 +1,21 @@
+# Step 1: Build the Java Spring Boot application using Maven
+FROM maven:3.9.6-eclipse-temurin-17 AS build
+WORKDIR /app
+
+# Copy the backend folder contents into the container
+COPY backend/ .
+
+# Build the Spring Boot JAR file
+RUN mvn clean package -DskipTests
+
+# Step 2: Run the application using a lightweight JDK runtime
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+
+# Copy the built JAR file from the build step
+COPY --from=build /app/target/*.jar app.jar
+
+EXPOSE 8080
+
+# Command to start the backend server
+ENTRYPOINT ["java", "-jar", "app.jar"]
