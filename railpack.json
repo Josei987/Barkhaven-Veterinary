@@ -1,0 +1,15 @@
+{
+  "$schema": "https://railpack.com/config.v1.json",
+  "packages": {
+    "apt": ["openjdk-17-jdk"]
+  },
+  "build": {
+    "builder": "generic",
+    "commands": [
+      "cd backend && ./mvnw clean package -DskipTests"
+    ]
+  },
+  "deploy": {
+    "startCommand": "java -jar backend/target/*.jar"
+  }
+}
