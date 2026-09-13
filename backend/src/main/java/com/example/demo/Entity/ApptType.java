@@ -1,0 +1,10 @@
+public enum ApptType {
+
+    WELLNESS_EXAM,
+    VACCINATION,
+    DENTAL_EXAM,
+    SKIN_OR_EAR_ISSUE,
+    URGENT_CONCERN,
+    FOLLOW_UP_VISIT
+
+}
