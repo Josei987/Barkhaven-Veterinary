@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    color: black;
+    padding: 0.25rem 1rem;
+}
+
+.logo {
+    font-family: 'Instrument-Serif';
+    font-size: 2rem;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.nav-login-bttn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    height: fit-content;
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.hero-section {
+    background-image: url('../assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 6em 12em;
+    padding-bottom: 20em;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.hero-title {
+    font-family: 'Instrument-Serif';
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0;
+}
+
+.hero-sub-text {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--lower-contrast);
+}
+
+.hero-signup-bttn {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 0.5em;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5em 1.5em;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 1em 0;
+}
+
+.info-card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
