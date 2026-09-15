@@ -1,17 +1,37 @@
-import java.util.Random;
+package com.example.demo.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Column;
+import jakarta.persistence.GenerationType;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 
+@Entity
 public class Appointment { // generate appointment id with random
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long apptID;
+
+    @Column (nullable = false)
     String ownerName;
+
+    @Column (nullable = false)
     String petName;
+    @Column (nullable = false)
     String petBreed;
+    @Column (nullable = false)
     String phoneNumber;
+    @Column (nullable = false)
     String email;
-    localDate date;
+    @Column (nullable = false)
+    LocalDate date;
+    @Column (nullable = false)
     LocalTime time;
+    @Column (nullable = false)
     String reason;
 
     public String getOwnerName() {
@@ -54,11 +74,11 @@ public class Appointment { // generate appointment id with random
         this.email = email;
     }
 
-    public localDate getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(localDate date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
