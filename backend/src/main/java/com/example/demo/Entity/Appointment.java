@@ -1,10 +1,12 @@
 package com.example.demo.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.EnumType;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -20,19 +22,31 @@ public class Appointment { // generate appointment id with random
     String ownerName;
 
     @Column (nullable = false)
-    String petName;
+    private String petName;
     @Column (nullable = false)
-    String petBreed;
+    private String petBreed;
     @Column (nullable = false)
-    String phoneNumber;
+    private String phoneNumber;
     @Column (nullable = false)
-    String email;
+    private String email;
     @Column (nullable = false)
-    LocalDate date;
+    private LocalDate date;
     @Column (nullable = false)
-    LocalTime time;
+    private LocalTime time;
     @Column (nullable = false)
-    String reason;
+    private String reason;
+
+    @Enumerated(EnumType.STRING)
+    private ApptStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private PetType petType;
+
+    @Enumerated(EnumType.STRING)
+    private ApptType apptType;
+
+    @Enumerated(EnumType.STRING)
+    private Vet vet;
 
     public String getOwnerName() {
         return ownerName;
