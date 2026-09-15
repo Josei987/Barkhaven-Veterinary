@@ -1,3 +1,5 @@
+package com.example.demo.Entity;
+
 public enum Vet {
 
     ANY_DOCTOR,
