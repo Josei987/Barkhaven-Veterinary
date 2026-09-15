@@ -34,7 +34,15 @@ header {
     text-decoration: none;
     font-size: 1.25rem;
     color: black;
+    transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
 }
+
+.nav-links a:hover {
+    color: #0f766e;
+    text-shadow: 0 0 12px rgba(15, 118, 110, 0.35);
+    transform: translateY(-1px);
+}
+
 
 .nav-login-bttn {
     background-color: var(--primary);
