@@ -48,6 +48,15 @@ public class Appointment { // generate appointment id with random
     @Enumerated(EnumType.STRING)
     private Vet vet;
 
+
+    public Long getApptID() {
+        return apptID;
+    }
+
+    public void setApptID(Long apptID) {
+        this.apptID = apptID;
+    }
+
     public String getOwnerName() {
         return ownerName;
     }
@@ -110,6 +119,38 @@ public class Appointment { // generate appointment id with random
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public ApptStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ApptStatus status) {
+        this.status = status;
+    }
+
+    public PetType getPetType() {
+        return petType;
+    }
+
+    public void setPetType(PetType petType) {
+        this.petType = petType;
+    }
+
+    public ApptType getApptType() {
+        return apptType;
+    }
+
+    public void setApptType(ApptType apptType) {
+        this.apptType = apptType;
+    }
+
+    public Vet getVet() {
+        return vet;
+    }
+
+    public void setVet(Vet vet) {
+        this.vet = vet;
     }
 
 }
