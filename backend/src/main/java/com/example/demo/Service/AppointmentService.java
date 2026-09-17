@@ -20,4 +20,5 @@ public class AppointmentService {
         return appointmentRepository.save(appointment); // saves the incoming data to the new appointment object / table
     }
 
+
 }

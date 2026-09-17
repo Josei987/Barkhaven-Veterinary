@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 
+
 @Entity
 public class Appointment { // generate appointment id with random
 
