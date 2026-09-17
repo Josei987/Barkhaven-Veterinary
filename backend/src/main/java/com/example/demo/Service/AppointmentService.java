@@ -1,8 +1,8 @@
 package com.example.demo.Service;
 
-import com.demo.Entity.Appointment;
-import com.demo.Entity.ApptStatus;
-import com.demo.Repository.AppointmentRepository;
+import com.example.demo.Entity.Appointment;
+import com.example.demo.Entity.ApptStatus;
+import com.example.demo.Repository.AppointmentRepository;
 import org.springframework.stereotype.Service;
 
 @Service // so other layers see that Service was created
