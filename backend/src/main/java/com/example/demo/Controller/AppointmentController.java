@@ -1,6 +1,6 @@
 package com.example.demo.Controller;
 
-import com.example.demo.Service.ApointmentService;
+import com.example.demo.Service.AppointmentService;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.Entity.Appointment;
 import org.springframework.http.HttpStatus;
@@ -21,11 +21,14 @@ public class AppointmentController { //controls api calls
 
     }
 
-@PostMapping
-public ResponseEntity<Appointment, appointment> {
+    //takes the user input information from frontend and saves that to
+    //the var saved which is passed into createAppointment() which is in 
+    //AppointmentService
+    @PostMapping
+    public ResponseEntity<Appointment>createAppointment(@RequestBody Appointment appointment) {
 
-        Appointment save = new AppointmentRepository(appointment);
-        return ResponseEntity<>(save, createAppointment);
+        Appointment saved = appointmentService.createAppontment(appointment);
+        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 
     }
 
