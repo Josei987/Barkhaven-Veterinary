@@ -6,6 +6,7 @@
     <title>Barkhaven Homepage</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./settings.html">Settings</a></li>
             </ul>
-            <button class="nav-login-bttn">Log in</button>
+            <button class="nav-login-bttn">Login</button>
         </nav>
     </header>
     <main>
@@ -35,37 +36,109 @@
                 <button class="hero-signup-bttn">Sign up</button>   
             </div>
         </section>
-        <section>
-            <div class="info-card-container">
-                <div class="card">
-                    <div class="card-image"></div>
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi hic repudiandae tenetur voluptas 
-                        recusandae architecto repellat ullam sunt.
-                    </p>  
+        <section class="service-info">
+            <h2 class="section-title">Everything Your Pet Needs to Thrive</h2>
+            <div class="carousel-frame">
+                <div class="container swiper">
+                    <div class="card-list swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 1
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 2
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 3
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 4
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 5
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-image"></div>
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi hic repudiandae tenetur voluptas 
-                        recusandae architecto repellat ullam sunt.
-                    </p>  
-                </div>
-                <div class="card">
-                    <div class="card-image"></div>
-                    <h2>Title</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi hic repudiandae tenetur voluptas 
-                        recusandae architecto repellat ullam sunt.
-                    </p>  
-                </div>    
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 BarkHaven. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/swiper-script.js"></script>
 </body>
 </html>

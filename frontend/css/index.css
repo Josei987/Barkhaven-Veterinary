@@ -3,6 +3,19 @@ body {
     font-family: 'Geist', sans-serif;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ------------------------------------------- HEADER NAVIGATION SECTION ------------------------------------------- */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -38,7 +51,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #0f766e;
+    color: var(--primary);
     text-shadow: 0 0 12px rgba(15, 118, 110, 0.35);
     transform: translateY(-1px);
 }
@@ -55,14 +68,16 @@ header {
     font-weight: 700;
 }
 
+/* ------------------------------------------- HERO SECTION ------------------------------------------- */
+
 .hero-section {
     background-image: url('../assets/images/hero-image.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
-    padding: 6em 12em;
-    padding-bottom: 20em;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 12vw, 12rem);
+    padding-bottom: clamp(8rem, 20vw, 20rem);
 }
 
 .hero-content {
@@ -72,15 +87,15 @@ header {
 }
 
 .hero-title {
-    font-family: 'Instrument-Serif';
-    font-size: 6rem;
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
     font-style: italic;
     font-weight: 200;
     margin: 0;
 }
 
 .hero-sub-text {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     margin: 0;
     color: var(--lower-contrast);
 }
@@ -91,18 +106,148 @@ header {
     border-radius: 0.5em;
     height: fit-content;
     width: fit-content;
-    padding: 0.5em 1.5em;
-    font-size: 1.5rem;
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 900;
-    margin: 1em 0;
+    margin: clamp(0.75rem, 2vw, 1rem) 0;
 }
 
-.info-card-container {
+/* ------------------------------------------- SERVICE CAROUSEL SECTION ------------------------------------------- */
+
+.section-title {
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.service-info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-offwhite);
+    height: fit-content;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    position: relative;
+    z-index: 2;
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-text {
+    color: var(--lower-contrast)
+}
+
+.card-list.swiper-wrapper {
+    align-items: stretch;
+}
+
+.card.swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+.card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.card-content footer {
+    margin-top: auto;
+}
+
+.carousel-frame {
+    position: relative;
+    width: min(100%, 1200px);
+    margin: 0 auto 3rem;
+    padding: 2rem 4rem 4rem;
+    overflow: hidden;
+}
+
+.container.swiper {
+    width: 100%;
+}
+
+.carousel-frame .swiper-button-prev {
+    left: 1rem;
+    color: var(--primary);
+}
+
+.carousel-frame .swiper-button-next {
+    right: 1rem;
+    color: var(--primary);
+}
+
+.carousel-frame .swiper-pagination {
+    bottom: 1rem;
+}
+
+.carousel-frame .swiper-pagination-bullet {
+    background-color: var(--primary);
+    opacity: 0.4;
+}
+
+.carousel-frame .swiper-pagination-bullet-active {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+
+@media (max-width: 1100px) {
+    header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .header-nav {
+        flex: 1 1 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .carousel-frame {
+        padding-inline: 2.5rem;
+    }
 }
