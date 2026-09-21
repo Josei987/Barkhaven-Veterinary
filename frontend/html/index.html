@@ -1,62 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>BarkHaven Homepage</title>
-  <link rel="stylesheet" href="../css/styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkhaven Homepage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
-  <div class="page-shell">
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark">🐾</div>
-      <span>Barkhaven Veterinary</span>
-    </div>
+    <header>
+        <div class="logo">
+            Barkhaven
+        </div>
+        <nav class="header-nav" aria-label="Navigation">
+            <ul class="nav-links">
+                <li><a href="./homepage.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./appointment.html">Appointment</a></li>
+                <li><a href="./renew.html">Prescriptions</a></li>
+                <li><a href="./quote.html">Quotes</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+            <button class="nav-login-bttn">Login</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Pet's Second Home</h1>
+                <p class="hero-sub-text">
+                    Providing the best care for your furry friends
+                </p>
+                <button class="hero-signup-bttn">Sign up</button>   
+            </div>
+        </section>
+        <section class="service-info">
+            <h2 class="section-title">Everything Your Pet Needs to Thrive</h2>
+            <div class="carousel-frame">
+                <div class="container swiper">
+                    <div class="card-list swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 1
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 2
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 3
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 4
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="../assets/images/placeholder.png" alt="place holder image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">
+                                Service 5
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facere, voluptas 
+                                sunt, labore excepturi quod magnam natus sapiente ipsum accusamus fuga facilis.
+                            </p>
+                            <footer>
+                                <a class="card-bttn">Read more</a>
+                            </footer>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="testimonial">
+            <blockquote>"BarkHaven has been a lifesaver! My dog loves it here."</blockquote>
+            <blockquote>"The staff is amazing and truly cares about the pets."</blockquote>
+        </section>
+        <section class="call-to-action">
+            <div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 BarkHaven. All rights reserved.</p>
+    </footer>
 
-    <nav class="nav" aria-label="Main menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="appointment.html">Schedule an Appointment</a>
-      <a href="quote.html">Get a Quote</a>
-      <a href="renew.html">Renew Prescriptions</a>
-    </nav>
-
-    <a href="contact.html" class="cta">Contact</a>
-  </header>
-  <main>
-    <section class="pethero" data-images="../assets/images/dog1.jpg, ../assets/images/dog2.jpg, ../assets/images/dog3.jpg, ../assets/images/dog4.jpg, ../assets/images/dog5.jpg, ../assets/images/cat1.jpg, ../assets/images/cat2.jpg, ../assets/images/cat3.jpg, ../assets/images/cat4.jpg">
-      <h2>Your Pet's Second Home</h2>
-      <p>Providing the best care for your furry friends.</p>
-      <a href="services.html" class="btn">Learn More</a>
-    </section>
-
-    <section class="features">
-      <div class="feature">
-        <h3>Safe Environment</h3>
-        <p>Our facility is designed to ensure the safety and comfort of your pets.</p>
-      </div>
-      <div class="feature">
-        <h3>Experienced Staff</h3>
-        <p>Our team of professionals is trained to provide top-notch care for all breeds.</p>
-      </div>
-      <div class="feature">
-        <h3>Fun Activities</h3>
-        <p>We offer a variety of services to keep your pets happy and healthy.</p>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <h2>What Our Clients Say</h2>
-      <blockquote>"BarkHaven has been a lifesaver! My dog loves it here."</blockquote>
-      <blockquote>"The staff is amazing and truly cares about the pets."</blockquote>
-    </section>
-
-  </main>
-  </div>
-
-  <footer>
-    <p>&copy; 2026 BarkHaven. All rights reserved.</p>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/swiper-script.js"></script>
 </body>
-  <script src="../js/script.js"></script>
 </html>

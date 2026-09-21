@@ -1,3 +1,47 @@
+/* ------------------------------------------- GLOBAL STYLES ------------------------------------------- */
+
+@font-face {
+    font-family: 'Instrument-Serif';
+    src: url('../assets/fonts/InstrumentSerif-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument-Serif';
+    src: url('../assets/fonts/InstrumentSerif-Italic.ttf');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../assets/fonts/Geist-VariableFont_wght.ttf');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../assets/fonts/Geist-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    --primary: #3f7d5a;
+    --primary-dark: #295b40;
+    --accent: #fcc773;
+    --lower-contrast: #bcbcbc;
+    --background-offwhite: #f3f3f3;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
 body {
     margin: 0;
     font-family: 'Geist', sans-serif;
@@ -138,13 +182,6 @@ header {
     padding: 1rem;
     border-radius: 1em;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    position: relative;
-    z-index: 2;
-    transform: translateY(-10px);
 }
 
 .card-image {
@@ -194,6 +231,7 @@ header {
 
 .container.swiper {
     width: 100%;
+    overflow: hidden;
 }
 
 .carousel-frame .swiper-button-prev {
