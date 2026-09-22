@@ -20,20 +20,26 @@ public class Appointment { // generate appointment id with random
     private Long apptID;
 
     @Column (nullable = false)
-    String ownerName;
+    private String ownerName;
 
     @Column (nullable = false)
     private String petName;
+    
     @Column (nullable = false)
     private String petBreed;
+    
     @Column (nullable = false)
     private String phoneNumber;
+    
     @Column (nullable = false)
     private String email;
+    
     @Column (nullable = false)
     private LocalDate date;
+    
     @Column (nullable = false)
     private LocalTime time;
+    
     @Column (nullable = false)
     private String reason;
 

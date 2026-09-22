@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/appointments") // url
+@RequestMapping("/api/appointments") // url
 @CrossOrigin(origins = "*")
 
 public class AppointmentController { //controls api calls
