@@ -32,5 +32,8 @@ public class AppointmentController { //controls api calls
 
     }
 
-
+    @GetMapping
+    public List<Appointment> getAllAppointments(){
+        return appointmentService.getAllAppointments();
+    }
 }
