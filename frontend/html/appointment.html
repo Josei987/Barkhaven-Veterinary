@@ -85,11 +85,11 @@
                                 <label for="petType">Pet type</label>
                                 <select id="petType" name="petType" required>
                                     <option value="" selected disabled>Select pet type</option>
-                                    <option>Dog</option>
-                                    <option>Cat</option>
-                                    <option>Rabbit</option>
-                                    <option>Bird</option>
-                                    <option>Other</option>
+                                    <option value="DOG">Dog</option>
+                                    <option value="CAT">Cat</option>
+                                    <option value="RABBIT">Rabbit</option>
+                                    <option value="BIRD">Bird</option>
+                                    <option value="OTHER value=""">Other</option>
                                 </select>
                             </div>
 
@@ -112,22 +112,23 @@
                                 <label for="visitType">Appointment type</label>
                                 <select id="visitType" name="visitType" required>
                                     <option value="" selected disabled>Select a service</option>
-                                    <option>Wellness exam</option>
-                                    <option>Vaccination</option>
-                                    <option>Dental exam</option>
-                                    <option>Skin/ear issue</option>
-                                    <option>Urgent concern</option>
-                                    <option>Follow-up visit</option>
+                                    <option value="WELLNESS_EXAM">Wellness exam</option>
+                                    <option value="VACCINATION">Vaccination</option>
+                                    <option value="DENTAL_EXAM">Dental exam</option>
+                                    <option value="SKIN_OR_EAR_ISSUE">Skin/ear issue</option>
+                                    <option value="URGENT_CONCERN">Urgent concern</option>
+                                    <option value="FOLLOW_UP_VISIT">Follow-up visit</option>
                                 </select>
                             </div>
 
                             <div class="field">
                                 <label for="vet">Preferred veterinarian</label>
                                 <select id="vet" name="vet">
-                                    <option value="" selected>Any doctor</option>
-                                    <option>Dr. Amelia Reed</option>
-                                    <option>Dr. Logan Brooks</option>
-                                    <option>Dr. Nina Patel</option>
+                                    <option value="" selected disabled>Choose a doctor</option>
+                                    <option value="ANY_DOCTOR">Any doctor</option>
+                                    <option value="DR_AMELIA_REED">Dr. Amelia Reed</option>
+                                    <option value="DR_NINA_PATEL">Dr. Logan Brooks</option>
+                                    <option value="DR_NINA_PATEL">Dr. Nina Patel</option>
                                 </select>
                             </div>
 
