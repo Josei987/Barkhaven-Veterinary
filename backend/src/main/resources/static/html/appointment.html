@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barkhaven Veterinary | Book an Appointment</title>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">🐾</div>
+                <span>Barkhaven Veterinary</span>
+            </div>
+
+            <nav class="nav" aria-label="Main menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="appointment.html">Schedule an Appointment</a>
+                <a href="quote.html">Get a Quote</a>
+                <a href="renew.html">Renew Prescriptions</a>
+            </nav>
+
+            <a href="contact.html" class="cta">Contact</a>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Compassionate care</span>
+                    <h1>Book your pet’s next visit.</h1>
+                    <p class="subtitle">
+                        From routine checkups to urgent concerns, our friendly team is here to support your pet’s health and happiness. Enter a time and date that works for you and we'll call you back to confirm your appointment.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content">
+                <aside class="info-panel">
+                    <h2 class="section-title">Why pet parents choose us</h2>
+
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <div class="icon">✓</div>
+                            <div>
+                                <h4>Same-week appointments</h4>
+                                <p>Flexible scheduling for preventive care, vaccines, and urgent concerns.</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon">♥</div>
+                            <div>
+                                <h4>Gentle, fear-free care</h4>
+                                <p>We create calm, low-stress visits tailored to your pet’s comfort level.</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon">⏱</div>
+                            <div>
+                                <h4>Clear communication</h4>
+                                <p>Our veterinarians explain treatment plans and answer every question.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="form-panel">
+                    <h2 class="section-title">Appointment Request</h2>
+
+                    <form id="appointmentForm">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="ownerName">Owner name</label>
+                                <input id="ownerName" name="ownerName" type="text" placeholder="Jane Smith" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="petName">Pet name</label>
+                                <input id="petName" name="petName" type="text" placeholder="Milo" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="petType">Pet type</label>
+                                <select id="petType" name="petType" required>
+                                    <option value="" selected disabled>Select pet type</option>
+                                    <option value="DOG">Dog</option>
+                                    <option value="CAT">Cat</option>
+                                    <option value="RABBIT">Rabbit</option>
+                                    <option value="BIRD">Bird</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="petBreed">Breed *Optional*</label>
+                                <input id="petBreed" name="petBreed" type="text" placeholder="Golden Retriever" />
+                            </div>
+
+                            <div class="field">
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="jane@email.com" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="visitType">Appointment type</label>
+                                <select id="visitType" name="visitType" required>
+                                    <option value="" selected disabled>Select a service</option>
+                                    <option value="WELLNESS_EXAM">Wellness exam</option>
+                                    <option value="VACCINATION">Vaccination</option>
+                                    <option value="DENTAL_EXAM">Dental exam</option>
+                                    <option value="SKIN_OR_EAR_ISSUE">Skin/ear issue</option>
+                                    <option value="URGENT_CONCERN">Urgent concern</option>
+                                    <option value="FOLLOW_UP_VISIT">Follow-up visit</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="vet">Preferred veterinarian</label>
+                                <select id="vet" name="vet">
+                                    <option value="" selected disabled>Choose a doctor</option>
+                                    <option value="ANY_DOCTOR">Any doctor</option>
+                                    <option value="DR_AMELIA_REED">Dr. Amelia Reed</option>
+                                    <option value="DR_LOGAN_BROOKS">Dr. Logan Brooks</option>
+                                    <option value="DR_NINA_PATEL">Dr. Nina Patel</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="date">Preferred date</label>
+                                <input id="date" name="date" type="date" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="time">Preferred time</label>
+                                <select id="time" name="time" required>
+                                    <option value="" selected disabled>Select a time</option>
+                                    <option>9:00 AM</option>
+                                    <option>9:30 AM</option>
+                                    <option>10:30 AM</option>
+                                    <option>11:00 AM</option>
+                                    <option>1:00 PM</option>
+                                    <option>1:30 PM</option>
+                                    <option>2:30 PM</option>
+                                    <option>3:00 PM</option>
+                                    <option>3:45 PM</option>
+                                </select>
+                            </div>
+
+                            <div class="field full">
+                                <label for="reason">Reason for visit</label>
+                                <textarea id="reason" name="reason" placeholder="Tell us a little about your pet's symptoms or what you'd like help with..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="submit-row">
+                            <span class="status" id="successMessage">Request sent successfully. We’ll contact you soon.</span>
+                            <button class="submit-btn" type="submit">Book Appointment</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/appointment.js"></script>
+</body>
+</html>
