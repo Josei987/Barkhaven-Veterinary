@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Settings | Barkhaven Veterinary</title>
+	<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+	<header>
+		<div class="logo">Barkhaven</div>
+		<nav class="header-nav" aria-label="Navigation">
+			<ul class="nav-links">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./appointment.html">Appointment</a></li>
+				<li><a href="./renew.html">Prescriptions</a></li>
+				<li><a href="./quote.html">Quotes</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./settings.html">Settings</a></li>
+			</ul>
+			<button class="nav-login-bttn">Login</button>
+		</nav>
+	</header>
+	<main class="settings-card">
+		<h1>Website Settings</h1>
+		<p>Customize your Barkhaven Veterinary website experience.</p>
+
+		<section class="setting">
+			<div>
+				<label for="dark-mode">Dark mode</label>
+				<small>Use a darker color theme.</small>
+			</div>
+			<label class="switch">
+				<input id="dark-mode" type="checkbox" aria-label="Enable dark mode" />
+				<span class="slider"></span>
+			</label>
+		</section>
+
+		<section class="setting">
+			<div>
+				<label for="language">Language</label>
+				<small>Choose the language used on this website.</small>
+			</div>
+			<select id="language">
+				<option>English</option>
+				<option>Spanish</option>
+				<option>French</option>
+			</select>
+		</section>
+
+		<button type="button" onclick="alert('Settings saved.')">Save settings</button>
+	</main>
+
+	<script src="../js/theme.js"></script>
+</body>
+</html>

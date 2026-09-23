@@ -104,6 +104,34 @@ body {
     color: var(--text);
 }
 
+body.dark {
+    --bg: #18232d;
+    --panel: #243442;
+    --card: #243442;
+    --text: #edf2f7;
+    --muted: #c1ccd6;
+    --line: #405365;
+    background: #18232d;
+    color: var(--text);
+}
+
+body.dark .topbar,
+body.dark .info-panel,
+body.dark .form-panel,
+body.dark .hero-card,
+body.dark .mini-visit {
+    background: var(--panel);
+    border-color: var(--line);
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #1d2b36;
+    color: var(--text);
+    border-color: #607386;
+}
+
 .page-shell {
     max-width: 1200px;
     margin: 0 auto;

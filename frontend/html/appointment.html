@@ -170,5 +170,18 @@
     </div>
 
     <script src="../js/appointment.js"></script>
+    <script>
+        const form = document.getElementById('appointmentForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            successMessage.classList.add('show');
+
+            form.reset();
+            setTimeout(() => successMessage.classList.remove('show'), 3500);
+        });
+    </script>
+    <script src="../js/theme.js"></script>
 </body>
 </html>
