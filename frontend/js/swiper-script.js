@@ -31,3 +31,12 @@ const swiper = new Swiper('.container.swiper', {
         prevEl: '.carousel-frame .swiper-button-prev'
     }
 });
+
+
+const testimonial_swiper = new Swiper('.testimonial.swiper', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: false,
+});
