@@ -494,3 +494,101 @@ body.dark small {
 body.dark .settings-card .setting {
     border-color: #405365;
 }
+
+/* ------------------------------------------- ABOUT PAGE ------------------------------------------- */
+
+.about-hero {
+    min-height: 340px;
+    display: grid;
+    place-items: center;
+    padding: 3rem 1.5rem;
+    background-color: #e8efe9;
+    background-position: center 55%;
+    background-size: cover;
+    color: #1e302b;
+    text-align: center;
+}
+
+.about-hero h1 {
+    max-width: 900px;
+    margin: 0;
+    font-family: 'Instrument-Serif', serif;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+    gap: 3rem;
+    padding: 3.5rem max(1.5rem, calc((100vw - 1100px) / 2));
+}
+
+.about-section--intro,
+.about-section--team {
+    background-color: #fff;
+}
+
+.about-section--origins {
+    background-color: #e8efe9;
+}
+
+.about-section h2 {
+    margin: 0;
+    color: var(--primary-dark);
+    font-family: 'Instrument-Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.about-section p {
+    max-width: 70ch;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-footer {
+    padding: 1.5rem;
+    background-color: var(--primary-dark);
+    color: #fff;
+    text-align: center;
+}
+
+.about-footer p {
+    margin: 0;
+}
+
+body.dark .about-section--intro,
+body.dark .about-section--team {
+    background-color: #243442;
+}
+
+body.dark .about-section--origins {
+    background-color: #1e302b;
+}
+
+body.dark .about-section h2 {
+    color: #a8d4b5;
+}
+
+@media (max-width: 700px) {
+    .about-hero {
+        min-height: 260px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-block: 2.5rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+}
