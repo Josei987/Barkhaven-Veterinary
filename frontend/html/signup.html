@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Barkhaven Veterinary</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Barkhaven
+        </div>
+        <nav class="header-nav" aria-label="Navigation">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./appointment.html">Appointment</a></li>
+                <li><a href="./renew.html">Prescriptions</a></li>
+                <li><a href="./quote.html">Quotes</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+            <a href="./login.html" class="nav-login-bttn">Login</a>
+            <a href="./signup.html" class="nav-login-bttn">Sign Up</a>
+        </nav>
+    </header>
+    <main class="login-layout signup-layout">
+        <section class="login-photo" aria-label="A warm welcome for pets and their people">
+            <img src="../assets/images/hero-image.jpg" alt="A pet enjoying a calm moment">
+            <div class="login-photo-copy">
+                <p>Care that feels like home</p>
+                <h2>A little more peace of mind for every paw in your family.</h2>
+            </div>
+        </section>
+        <section class="login-panel signup-panel" aria-labelledby="signup-title">
+            <div class="login-content">
+                <p class="login-eyebrow">Barkhaven Veterinary</p>
+                <h1 id="signup-title">Create your account</h1>
+                <p class="login-intro">Join Barkhaven and keep your pet's care close at hand.</p>
+                <form class="signup-form" method="post">
+                    <div class="signup-field-row">
+                        <label class="login-field" for="first-name">
+                            First name
+                            <input id="first-name" name="first-name" type="text" autocomplete="given-name" placeholder="First name" required>
+                        </label>
+                        <label class="login-field" for="last-name">
+                            Last name
+                            <input id="last-name" name="last-name" type="text" autocomplete="family-name" placeholder="Last name" required>
+                        </label>
+                    </div>
+                    <label class="login-field" for="signup-email">
+                        Email address
+                        <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="login-field" for="signup-phone">
+                        Phone number
+                        <input id="signup-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" required>
+                    </label>
+                    <label class="login-field" for="street-address">
+                        Street address
+                        <input id="street-address" name="street-address" type="text" autocomplete="address-line1" placeholder="Street address" required>
+                    </label>
+                    <div class="signup-field-row signup-location-row">
+                        <label class="login-field" for="city">
+                            City
+                            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="City" required>
+                        </label>
+                        <label class="login-field" for="state">
+                            State
+                            <input id="state" name="state" type="text" autocomplete="address-level1" placeholder="State" required>
+                        </label>
+                        <label class="login-field" for="zip-code">
+                            ZIP code
+                            <input id="zip-code" name="zip-code" type="text" autocomplete="postal-code" inputmode="numeric" placeholder="ZIP code" required>
+                        </label>
+                    </div>
+                    <fieldset class="signup-emergency">
+                        <legend>Emergency contact</legend>
+                        <div class="signup-field-row">
+                            <label class="login-field" for="emergency-name">
+                                Contact name
+                                <input id="emergency-name" name="emergency-name" type="text" autocomplete="off" placeholder="Full name" required>
+                            </label>
+                            <label class="login-field" for="emergency-phone">
+                                Phone number
+                                <input id="emergency-phone" name="emergency-phone" type="tel" autocomplete="off" placeholder="(555) 123-4567" required>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <label class="login-field" for="signup-password">
+                        Password
+                        <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" aria-describedby="signup-password-hint" placeholder="Create a password" required>
+                        <span class="signup-password-hint" id="signup-password-hint">Use at least 8 characters.</span>
+                    </label>
+                    <label class="login-field" for="confirm-password">
+                        Confirm password
+                        <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="8" placeholder="Enter your password again" required>
+                    </label>
+                    <button class="login-submit" type="submit">Create account</button>
+                </form>
+                <p class="login-signup">Already have an account? <a class="login-link" href="./login.html">Sign in</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

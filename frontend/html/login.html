@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barkhaven Homepage</title>
+    <title>Login | Barkhaven Veterinary</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
@@ -23,5 +23,44 @@
                 <li><a href="./settings.html">Settings</a></li>
             </ul>
             <a href="./login.html" class="nav-login-bttn">Login</a>
+            <a href="./signup.html" class="nav-login-bttn">Sign Up</a>
         </nav>
     </header>
+    <main class="login-layout">
+        <section class="login-photo" aria-label="A warm welcome for pets and their people">
+            <img src="../assets/images/hero-image.jpg" alt="A pet enjoying a calm moment">
+            <div class="login-photo-copy">
+                <p>Care that feels like home</p>
+                <h2>Here for every wag, purr, and little paw.</h2>
+            </div>
+        </section>
+        <section class="login-panel" aria-labelledby="login-title">
+            <div class="login-content">
+                <p class="login-eyebrow">Barkhaven Veterinary</p>
+                <h1 id="login-title">Welcome back</h1>
+                <p class="login-intro">Sign in to keep up with your pet's care and visits.</p>
+                <form class="login-form" method="post">
+                    <label class="login-field" for="email">
+                        Email address
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="login-field" for="password">
+                        Password
+                        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+                    </label>
+                    <div class="login-options">
+                        <label class="login-remember" for="remember-me">
+                            <input id="remember-me" name="remember-me" type="checkbox">
+                            Remember me
+                        </label>
+                        <a class="login-link" href="./contact.html">Need help signing in?</a>
+                    </div>
+                    <button class="login-submit" type="submit">Sign in</button>
+                </form>
+                <p class="login-signup">New to Barkhaven? <a class="login-link" href="./signup.html">Create an account</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="../js/theme.js"></script>
+</body>
+</html>
