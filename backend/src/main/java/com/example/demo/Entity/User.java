@@ -1,14 +1,14 @@
-package com.example.demo.Entity
+package com.example.demo.Entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
+// import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.EnumType;
-import java.time.LocalDate;
-import java.time.LocalTime;
+// import java.time.LocalDate;
+// import java.time.LocalTime;
 
 @Entity
 public class User {
