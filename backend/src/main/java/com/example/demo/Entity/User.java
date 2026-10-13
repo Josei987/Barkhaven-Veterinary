@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.EnumType;
+//import jakarta.persistence.EnumType;
 // import java.time.LocalDate;
 // import java.time.LocalTime;
 
@@ -30,14 +30,28 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String address;
-
-    @Column(nullable = false)
     private String phoneNumber;
 
     @Column(nullable = false)
     private String birthDate;
 
+    @Column(nullable = false)
+    private String streetAddress;
+
+    @Column(nullable = false)
+    private String state;
+
+    @Column(nullable = false)
+    private String city;
+
+    @Column(nullable = false)
+    private String zipCode;
+
+    @Column(nullable = false)
+    private String emergencyContactName;
+
+    @Column(nullable = false)
+    private String emergencyContactNumber;
 
     public Long getUserId() {
         return userId;
@@ -79,14 +93,6 @@ public class User {
         this.password = password;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -102,4 +108,54 @@ public class User {
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
+
+    
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getState(){
+        return state;
+    }
+
+    public void setState(String state){
+        this.state = state;
+    }
+
+    public String getCity(){
+        return city;
+    }
+
+    public void setCity(String city){
+        this.city = city;
+    }
+
+    public String getZipCode(){
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode){
+        this.zipCode = zipCode;
+    }
+
+    public String getEmergencyContactName(){
+        return emergencyContactName;
+    }
+
+    public void setEmergencyContactName(String emergencyContactName){
+        this.emergencyContactName = emergencyContactName;
+    }
+
+    public String getEmergencyContactNumber(){
+        return emergencyContactNumber;
+    }
+
+    public void setEmergencyContactNumber(String emergencyContactNumber){
+        this.emergencyContactName = emergencyContactNumber;
+    }
+
 }
