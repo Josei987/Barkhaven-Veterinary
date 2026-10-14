@@ -36,7 +36,7 @@
     --primary: #3f7d5a;
     --primary-dark: #295b40;
     --accent: #fcc773;
-    --lower-contrast: #bcbcbc;
+    --lower-contrast: #a4a4a4;
     --background-offwhite: #f3f3f3;
     --page-background: #f3f3f3;
     --page-text: #1f2933;
@@ -917,4 +917,40 @@ body.dark .login-layout:not(.signup-layout) .login-panel {
     .login-layout:not(.signup-layout) .login-panel {
         box-shadow: inset 0 5px 0 var(--accent);
     }
+}
+
+/* ------------------------------------------- APPOINTMENTS PAGE ------------------------------------------- */
+
+section.appointment-prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+.appointment-prompt__title {
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(0.125rem, 5vw, 4rem);
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.appointment-prompt__subtext {
+    font-size: 1.5rem;
+    color: var(--lower-contrast);   
+}
+
+.appointment-prompt a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    height: fit-content;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
