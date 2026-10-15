@@ -25,19 +25,19 @@ public class UserService {
             throw new RuntimeException("There is already an account created with this email address");
         }
 
-        public UserRequestDTO logIn(LoginRequestDTO logInRequestDTO) {
-            if(userRepository.findByEmail(logInRequestDTO.getEmail())) {
-                .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
-            }
-
-            boolean passwordMatches = passwordEncoder.match(PasswordRequestDTO.getPassword(), user.getPassowrd());
-
-            if(!passwordMatches) {
-                new RuntimeException("Email or password is incorrect");
-            }
-
-            return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.get.LastName(), saved.getphoneNumber(), saved.getEmail());
+   public UserRequestDTO logIn(LoginRequestDTO logInRequestDTO) {
+        if(userRepository.findByEmail(logInRequestDTO.getEmail())) {
+            .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
         }
+
+        boolean passwordMatches = passwordEncoder.match(PasswordRequestDTO.getPassword(), user.getPassowrd());
+
+        if(!passwordMatches) {
+            new RuntimeException("Email or password is incorrect");
+        }
+
+        return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.get.LastName(), saved.getphoneNumber(), saved.getEmail());
+   }
 
         //hashes the password and sets it as password in table
         String hashedPassword = passwordEncoder.encode(user.getPassword());
