@@ -19,13 +19,23 @@ public class UserService {
     }
 
     //creates account and returns to the UserResponseDTO
-    public UserResponseDTO createAccount(User user){
+    public UserResponseDTO createAccount(User user) {
         //checks if the email already exists and throws exception if so
         if(userRepository.findByEmail(user.getEmail()).isPresent()){
             throw new RuntimeException("There is already an account created with this email address");
         }
 
-   }
+        //hashes the password and sets it as password in table
+        String hashedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(hashedPassword);
+
+        //saves to userRepository to write to table
+        User saved = userRepository.save(user);
+
+        //return the data we want the frontend to see
+        //to the UserResponseDTO
+        return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.getLastName(), saved.getPhoneNumber(), saved.getEmail());
+    }
 
     public UserResponseDTO logIn(LoginRequestDTO loginRequestDTO) {
         if (userRepository.findByEmail(loginRequestDTO.getEmail())) {
@@ -41,15 +51,4 @@ public class UserService {
         return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.get.LastName(), saved.getphoneNumber(), saved.getEmail());
     }
 
-        //hashes the password and sets it as password in table
-        String hashedPassword = passwordEncoder.encode(user.getPassword());
-        user.setPassword(hashedPassword);
-
-        //saves to userRepository to write to table
-        User saved = userRepository.save(user);
-        
-        //return the data we want the frontend to see
-        //to the UserResponseDTO
-        return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.getLastName(), saved.getPhoneNumber(), saved.getEmail());
-    }
 }
