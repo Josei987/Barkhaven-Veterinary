@@ -5,7 +5,7 @@ import com.example.demo.Repository.UserRepository;
 import com.example.demo.Dto.UserResponseDTO;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import com.example.demo.Dto.UserRequestDTO;
+import com.example.demo.Dto.LoginRequestDTO;
 
 @Service
 public class UserService {
@@ -25,19 +25,21 @@ public class UserService {
             throw new RuntimeException("There is already an account created with this email address");
         }
 
-   public UserResponseDTO logIn(LoginRequestDTO loginRequestDTO) {
-        if(userRepository.findByEmail(loginRequestDTO.getEmail())) {
+   }
+
+    public UserResponseDTO logIn(LoginRequestDTO loginRequestDTO) {
+        if (userRepository.findByEmail(loginRequestDTO.getEmail())) {
             .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
         }
 
         boolean passwordMatches = passwordEncoder.match(PasswordRequestDTO.getPassword(), user.getPassowrd());
 
-        if(!passwordMatches) {
+        if (!passwordMatches) {
             new RuntimeException("Email or password is incorrect");
         }
 
         return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.get.LastName(), saved.getphoneNumber(), saved.getEmail());
-   }
+    }
 
         //hashes the password and sets it as password in table
         String hashedPassword = passwordEncoder.encode(user.getPassword());
