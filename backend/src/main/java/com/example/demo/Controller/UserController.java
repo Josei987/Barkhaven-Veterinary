@@ -32,7 +32,7 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> logIn(@RequestBody LoginRequestDTO loginRequestDTO) {
         UserResponseDTO saved = userService.logIn(loginRequestDTO);
 
-        return ResponseEntity.status.(HttpStatus.OK).body(saved);
+        return ResponseEntity.status(HttpStatus.OK).body(saved);
 
     }
 
