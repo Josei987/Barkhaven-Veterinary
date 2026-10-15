@@ -359,30 +359,13 @@ section.testimonial {
 
 /* ------------------------------------------- SETTINGS.HTML ------------------------------------------- */
 
-.settings-card {
-    max-width: 680px;
-    margin: 48px auto;
-    padding: 32px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-}
-
-.settings-card h1 {
-    margin-top: 0;
-}
-
 .setting {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.setting:last-of-type {
-    border-bottom: 0;
+    gap: 1.5rem;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid #e2e8e3;
 }
 
 .setting label {
@@ -391,42 +374,249 @@ section.testimonial {
 
 .setting small {
     display: block;
-    margin-top: 6px;
-    color: #667085;
+    margin-top: 0.35rem;
+    color: #66736b;
     font-weight: normal;
+    line-height: 1.45;
 }
 
-.settings-card select,
-.settings-card button {
-    padding: 10px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
+.settings-page {
+    width: min(100% - 2rem, 760px);
+    margin: clamp(2.5rem, 7vw, 5rem) auto;
+}
+
+.settings-heading {
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.settings-eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.settings-heading h1 {
+    margin: 0;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.settings-heading > p:last-child {
+    margin: 0.75rem 0 0;
+    color: #52645b;
+    line-height: 1.6;
+}
+
+.settings-card {
+    padding: clamp(1.25rem, 4vw, 2.25rem);
+    border: 1px solid #e2e8e3;
+    border-radius: 0.85rem;
     background: #fff;
+    box-shadow: 0 8px 28px rgba(31, 41, 51, 0.06);
+}
+
+.settings-section + .settings-section {
+    margin-top: 1.75rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid #e2e8e3;
+}
+
+.settings-section h2 {
+    margin: 0;
+    color: #1e302b;
     font-size: 1rem;
+    font-weight: 700;
 }
 
-.settings-card button {
-    margin-top: 24px;
+.settings-section > .setting:first-of-type {
+    margin-top: 0.5rem;
+    border-top: 0;
+}
+
+.settings-card select {
+    min-width: 145px;
+    min-height: 2.75rem;
+    padding: 0.6rem 2rem 0.6rem 0.75rem;
+    border: 1px solid #aab8ae;
+    border-radius: 4px;
+    background: #fff;
+    color: #1f2933;
+    font: inherit;
+}
+
+.settings-card select:focus-visible,
+.settings-save:focus-visible,
+.settings-add-animal:focus-visible {
+    outline: 3px solid rgba(63, 125, 90, 0.3);
+    outline-offset: 2px;
+}
+
+.settings-animals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.settings-animals p {
+    max-width: 440px;
+    margin: 0.5rem 0 0;
+    color: #66736b;
+    line-height: 1.5;
+}
+
+.settings-add-animal {
+    flex: 0 0 auto;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    background: var(--primary);
     color: #fff;
-    background: #176b87;
-    border-color: #176b87;
-    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.settings-card button:hover {
-    background: #12566d;
+.settings-add-animal:hover,
+.settings-save:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.settings-save {
+    min-height: 2.9rem;
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.auth-prompt-page {
+    display: grid;
+    min-height: min(680px, calc(100svh - 80px));
+    place-items: center;
+    padding: clamp(3rem, 9vw, 7rem) 1.25rem;
+    background: var(--background-offwhite);
+}
+
+.auth-prompt-content {
+    width: min(100%, 660px);
+    text-align: center;
+}
+
+.auth-prompt-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.auth-prompt-content h1 {
+    margin: 0;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.auth-prompt-copy {
+    max-width: 540px;
+    margin: 1rem auto 2rem;
+    color: #52645b;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.auth-prompt-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.auth-prompt-login,
+.auth-prompt-signup {
+    display: inline-flex;
+    min-height: 2.9rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.auth-prompt-login {
+    background: var(--primary);
+    color: #fff;
+}
+
+.auth-prompt-signup {
+    background: transparent;
+    color: var(--primary-dark);
+}
+
+.auth-prompt-login:hover,
+.auth-prompt-signup:hover {
+    transform: translateY(-1px);
+}
+
+.auth-prompt-login:hover {
+    border-color: var(--primary-dark);
+    background: var(--primary-dark);
+}
+
+.auth-prompt-signup:hover {
+    background: #edf3ee;
+}
+
+.auth-prompt-login:focus-visible,
+.auth-prompt-signup:focus-visible {
+    outline: 3px solid rgba(63, 125, 90, 0.3);
+    outline-offset: 2px;
 }
 
 .switch {
     position: relative;
+    flex: 0 0 48px;
     width: 48px;
     height: 26px;
 }
 
 .switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     opacity: 0;
-    width: 0;
-    height: 0;
+}
+
+.switch input:focus-visible + .slider {
+    outline: 3px solid rgba(63, 125, 90, 0.3);
+    outline-offset: 2px;
 }
 
 .slider {
@@ -451,11 +641,40 @@ section.testimonial {
 }
 
 .switch input:checked + .slider {
-    background: #176b87;
+    background: var(--primary);
 }
 
 .switch input:checked + .slider::before {
     transform: translateX(22px);
+}
+
+@media (max-width: 520px) {
+    .settings-page {
+        width: min(100% - 1.25rem, 760px);
+        margin-block: 2rem;
+    }
+
+    .settings-animals {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .settings-add-animal {
+        width: 100%;
+    }
+
+    .auth-prompt-actions {
+        flex-direction: column;
+    }
+
+    .settings-actions {
+        justify-content: stretch;
+    }
+
+    .settings-save {
+        width: 100%;
+    }
 }
 
 /* ------------------------------------------- DARK MODE ------------------------------------------- */
@@ -480,8 +699,7 @@ body.dark .service-info {
     background-color: #18232d;
 }
 
-body.dark .card,
-body.dark .settings-card {
+body.dark .card {
     background-color: #243442;
     color: #edf2f7;
 }
@@ -491,8 +709,60 @@ body.dark small {
     color: #c1ccd6;
 }
 
+body.dark .settings-heading h1,
+body.dark .settings-section h2 {
+    color: #edf2f7;
+}
+
+body.dark .settings-heading > p:last-child,
+body.dark .settings-eyebrow,
+body.dark .settings-card .setting small,
+body.dark .settings-animals p {
+    color: #c1ccd6;
+}
+
+body.dark .settings-card {
+    border-color: #405365;
+    background: #243442;
+}
+
+body.dark .settings-section + .settings-section,
 body.dark .settings-card .setting {
     border-color: #405365;
+}
+
+body.dark .settings-card .setting label {
+    color: #edf2f7;
+}
+
+body.dark .settings-card select {
+    border-color: #526579;
+    background: #18232d;
+    color: #edf2f7;
+}
+
+body.dark .auth-prompt-page {
+    background: #18232d;
+}
+
+body.dark .auth-prompt-content h1 {
+    color: #edf2f7;
+}
+
+body.dark .auth-prompt-eyebrow {
+    color: #a8d4b5;
+}
+
+body.dark .auth-prompt-copy {
+    color: #c1ccd6;
+}
+
+body.dark .auth-prompt-signup {
+    color: #a8d4b5;
+}
+
+body.dark .auth-prompt-signup:hover {
+    background: #1e302b;
 }
 
 /* ------------------------------------------- ABOUT PAGE ------------------------------------------- */
@@ -777,6 +1047,92 @@ body.dark .login-signup {
 body.dark .login-eyebrow,
 body.dark .login-link {
     color: #a8d4b5;
+}
+
+.signup-success-content {
+    text-align: center;
+}
+
+.signup-success-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary);
+}
+
+.signup-success-icon circle {
+    fill: rgba(63, 125, 90, 0.12);
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.signup-success-icon path {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+}
+
+.signup-success-label {
+    margin: 0 0 0.5rem;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.signup-success-content .login-intro {
+    margin-bottom: 1.75rem;
+}
+
+.signup-success-next {
+    padding: 1.5rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 0.75rem;
+    background: #edf3ee;
+}
+
+.signup-success-next h2 {
+    margin: 0;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.signup-success-next p {
+    margin: 0.5rem 0 1.25rem;
+    color: #52645b;
+    line-height: 1.5;
+}
+
+.signup-success-action {
+    display: block;
+    padding: 0.9rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.signup-success-settings {
+    margin: 1.25rem 0 0;
+    color: #52645b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+body.dark .signup-success-label,
+body.dark .signup-success-next h2 {
+    color: #edf2f7;
+}
+
+body.dark .signup-success-next {
+    border-color: #405365;
+    background: #1e302b;
+}
+
+body.dark .signup-success-next p,
+body.dark .signup-success-settings {
+    color: #c1ccd6;
 }
 
 @media (max-width: 760px) {
