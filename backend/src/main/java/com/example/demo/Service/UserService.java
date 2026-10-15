@@ -25,8 +25,8 @@ public class UserService {
             throw new RuntimeException("There is already an account created with this email address");
         }
 
-   public UserRequestDTO logIn(LoginRequestDTO logInRequestDTO) {
-        if(userRepository.findByEmail(logInRequestDTO.getEmail())) {
+   public UserRequestDTO logIn(LoginRequestDTO loginRequestDTO) {
+        if(userRepository.findByEmail(loginRequestDTO.getEmail())) {
             .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
         }
 

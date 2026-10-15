@@ -28,11 +28,11 @@ public class UserController {
 
     }
 
-    @PostMapping("/logIn")
-    public ResponseEntity<UserResponseDTO> logIn(@RequestBody LogInRequestDTO logInRequestDTO) {
-        UserResponseDTO saved = userService.logIn(logInRequestDTO);
+    @PostMapping("/login")
+    public ResponseEntity<UserResponseDTO> logIn(@RequestBody LoginRequestDTO loginRequestDTO) {
+        UserResponseDTO saved = userService.logIn(loginRequestDTO);
 
-        return responseEntity.status.(HttpStatus.OK).body(saved);
+        return ResponseEntity.status.(HttpStatus.OK).body(saved);
 
     }
 
