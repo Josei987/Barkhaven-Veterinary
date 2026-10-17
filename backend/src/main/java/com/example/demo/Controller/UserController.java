@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.Entity.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import java.util.List;
 import com.example.demo.Dto.UserResponseDTO;
-import com.example.demo.Dto.PasswordRequestDTO;
+import com.example.demo.Dto.LoginRequestDTO;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -30,9 +29,9 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<UserResponseDTO> logIn(@RequestBody LoginRequestDTO loginRequestDTO) {
-        UserResponseDTO saved = userService.logIn(loginRequestDTO);
+        UserResponseDTO user = userService.logIn(loginRequestDTO);
 
-        return ResponseEntity.status(HttpStatus.OK).body(saved);
+        return ResponseEntity.status(HttpStatus.OK).body(user);
 
     }
 
