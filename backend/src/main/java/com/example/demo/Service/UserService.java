@@ -7,6 +7,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.example.demo.Dto.LoginRequestDTO;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
     
@@ -37,18 +39,21 @@ public class UserService {
         return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.getLastName(), saved.getPhoneNumber(), saved.getEmail());
     }
 
+    //var varName = 
     public UserResponseDTO logIn(LoginRequestDTO loginRequestDTO) {
-        if (userRepository.findByEmail(loginRequestDTO.getEmail())) {
-            .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
-        }
+        //if (userRepository.findByEmail(loginRequestDTO.getEmail())) {
+        //    .orElseThrow(() -> new RuntimeException("The email or password is incorrect"));
+        //}
 
-        boolean passwordMatches = passwordEncoder.match(PasswordRequestDTO.getPassword(), user.getPassowrd());
+        User user = userRepository.findByEmail(loginRequestDTO.getEmail()).orElseThrow(() -> new RuntimeException("Email or Password is incorrect."));
+        
+        boolean passwordMatches = passwordEncoder.matches(loginRequestDTO.getPassword(), user.getPassword());
 
         if (!passwordMatches) {
-            new RuntimeException("Email or password is incorrect");
+            throw new RuntimeException("Email or password is incorrect");
         }
 
-        return new UserResponseDTO(saved.getUserId(), saved.getFirstName(), saved.get.LastName(), saved.getphoneNumber(), saved.getEmail());
+        return new UserResponseDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getPhoneNumber(), user.getEmail());
     }
 
 }
