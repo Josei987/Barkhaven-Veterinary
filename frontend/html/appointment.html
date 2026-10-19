@@ -71,41 +71,24 @@
 
                     <form id="appointmentForm">
                         <div class="form-grid">
-                            <div class="field">
-                                <label for="ownerName">Owner name</label>
-                                <input id="ownerName" name="ownerName" type="text" placeholder="Jane Smith" required />
-                            </div>
 
                             <div class="field">
-                                <label for="petName">Pet name</label>
-                                <input id="petName" name="petName" type="text" placeholder="Milo" required />
-                            </div>
-
-                            <div class="field">
-                                <label for="petType">Pet type</label>
-                                <select id="petType" name="petType" required>
-                                    <option value="" selected disabled>Select pet type</option>
-                                    <option value="DOG">Dog</option>
-                                    <option value="CAT">Cat</option>
-                                    <option value="RABBIT">Rabbit</option>
-                                    <option value="BIRD">Bird</option>
-                                    <option value="OTHER">Other</option>
+                                <label for="pet">Pet</label>
+                                <select id="pet" name="pet" required>
+                                    <option value="" selected disabled>Select pet</option>
+                                    <option value="LUNA">Luna</option>
+                                    <option value="DAISY">Daisy</option>
+                                    <option value="COOPER">Cooper</option>
                                 </select>
+                                <a href="./add-pet.html" class="add-pet-btn">Add pet</a>
                             </div>
 
                             <div class="field">
-                                <label for="petBreed">Breed *Optional*</label>
-                                <input id="petBreed" name="petBreed" type="text" placeholder="Golden Retriever" />
-                            </div>
-
-                            <div class="field">
-                                <label for="phone">Phone</label>
-                                <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" required />
-                            </div>
-
-                            <div class="field">
-                                <label for="email">Email</label>
-                                <input id="email" name="email" type="email" placeholder="jane@email.com" required />
+                                <label for="owner">Owner</label>
+                                <select id="owner" name="owner" required>
+                                    <option value="" selected disabled>Select owner</option>
+                                    <option value="JAMES_SMITH">James Smith</option>
+                                </select>
                             </div>
 
                             <div class="field">

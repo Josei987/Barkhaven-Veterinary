@@ -1275,7 +1275,7 @@ body.dark .login-layout:not(.signup-layout) .login-panel {
     }
 }
 
-/* ------------------------------------------- APPOINTMENTS PAGE ------------------------------------------- */
+/* ------------------------------------------- APPOINTMENTS DEFAULT PAGE ------------------------------------------- */
 
 section.appointment-prompt {
     display: flex;
@@ -1310,3 +1310,5 @@ section.appointment-prompt {
     font-weight: 700;
     margin-bottom: 1rem;
 }
+
+/* ------------------------------------------- APPOINTMENTS PAGE ------------------------------------------- */
