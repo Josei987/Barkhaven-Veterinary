@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Learn more about Barkhaven Veterinary">
+    <meta name="description" content="Add your pet's details to your Barkhaven Veterinary account.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Barkhaven Veterinary</title>
+    <title>Add a Pet | Barkhaven Veterinary</title>
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
-<body role="main">
-    <header role="banner">
-        <div class="logo">
-            Barkhaven
-        </div>
-        <nav class="header-nav" aria-label="Navigation" role="navigation">
+<body>
+    <header>
+        <div class="logo">Barkhaven</div>
+        <nav class="header-nav" aria-label="Navigation">
             <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -21,9 +18,100 @@
                 <li><a href="./renew.html">Prescriptions</a></li>
                 <li><a href="./quote.html">Quotes</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./settings.html">Settings</a></li>
+                <li><a href="./settings.html" aria-current="page">Settings</a></li>
             </ul>
             <a href="./login.html" class="nav-login-bttn">Login</a>
             <a href="./signup.html" class="nav-login-bttn">Sign Up</a>
         </nav>
-</header>
+    </header>
+
+    <main class="settings-page add-pet-page">
+        <div class="settings-heading">
+            <p class="settings-eyebrow">Barkhaven Veterinary</p>
+            <h1 id="add-pet-title">Add a pet</h1>
+            <p>Tell us all about your four legged friend.</p>
+        </div>
+
+        <section class="settings-card add-pet-card" aria-labelledby="add-pet-title">
+            <form class="add-pet-form">
+                <div class="pet-form-grid">
+                    <div class="pet-field">
+                        <label for="pet-name">Pet name <span aria-hidden="true">*</span></label>
+                        <input id="pet-name" name="petName" type="text" autocomplete="off" placeholder="e.g. Milo" required>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="species">Species <span aria-hidden="true">*</span></label>
+                        <select id="species" name="species" required>
+                            <option value="" selected disabled>Select a species</option>
+                            <option value="cat">Cat</option>
+                            <option value="dog">Dog</option>
+                        </select>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="breed">Breed <span aria-hidden="true">*</span></label>
+                        <select id="breed" name="breed" required disabled>
+                            <option value="" selected disabled>Select a species first</option>
+                        </select>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="age">Age (years) <span aria-hidden="true">*</span></label>
+                        <input id="age" name="age" type="number" min="0" step="any" placeholder="e.g. 4" required>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="gender">Gender <span aria-hidden="true">*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="" selected disabled>Select gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="weight">Weight <span aria-hidden="true">*</span></label>
+                        <input id="weight" name="weight" type="text" placeholder="e.g. 12 lb, or N/A if unknown" required>
+                        <small>Include the unit, or enter N/A if you don't know their weight.</small>
+                    </div>
+
+                    <div class="pet-field">
+                        <label for="altered-status">Neutered/spayed status <span aria-hidden="true">*</span></label>
+                        <select id="altered-status" name="alteredStatus" required>
+                            <option value="" selected disabled>Select status</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+
+                    <div class="pet-field pet-field-wide">
+                        <label for="prior-conditions">Prior conditions <span class="optional-label">(optional)</span></label>
+                        <textarea id="prior-conditions" name="priorConditions" rows="4" placeholder="Share any previous diagnoses, surgeries, or health concerns."></textarea>
+                    </div>
+
+                    <div class="pet-field pet-field-wide">
+                        <label for="medications">Current medications <span class="optional-label">(optional)</span></label>
+                        <textarea id="medications" name="medications" rows="3" placeholder="List any medications and their dosages, if known."></textarea>
+                    </div>
+
+                    <div class="pet-field pet-field-wide">
+                        <label for="notes">Notes <span class="optional-label">(optional)</span></label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Anything else you'd like our care team to know?"></textarea>
+                    </div>
+                </div>
+
+                <div class="settings-actions add-pet-actions">
+                    <a class="settings-add-animal" href="./settings.html">Cancel</a>
+                    <button class="settings-save" type="submit">Add pet</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/add-pet.js"></script>
+</body>
+</html>
