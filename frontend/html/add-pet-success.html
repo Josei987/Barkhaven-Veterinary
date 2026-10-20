@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your pet was added to your Barkhaven Veterinary account.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Added | Barkhaven Veterinary</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Barkhaven</div>
+        <nav class="header-nav" aria-label="Navigation">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./appointment.html">Appointment</a></li>
+                <li><a href="./renew.html">Prescriptions</a></li>
+                <li><a href="./quote.html">Quotes</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+            <a href="./login.html" class="nav-login-bttn">Login</a>
+            <a href="./signup.html" class="nav-login-bttn">Sign Up</a>
+        </nav>
+    </header>
+
+    <main class="auth-prompt-page add-pet-success-page">
+        <section class="auth-prompt-content add-pet-success-content" aria-labelledby="add-pet-success-title">
+            <svg class="signup-success-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                <circle cx="24" cy="24" r="22"></circle>
+                <path d="m14 24 7 7 14-15"></path>
+            </svg>
+            <p class="auth-prompt-eyebrow">Barkhaven Veterinary</p>
+            <h1 id="add-pet-success-title">Your pet has been added!</h1>
+            <p class="auth-prompt-copy">Thanks for sharing your pet's details. We're looking forward to being part of their care.</p>
+
+            <div class="add-pet-success-prompts">
+                <section class="add-pet-success-prompt">
+                    <h2>Head home</h2>
+                    <p>Return to Barkhaven's home page and explore what we offer.</p>
+                    <a class="auth-prompt-login" href="./index.html">Go to home</a>
+                </section>
+                <section class="add-pet-success-prompt">
+                    <h2>Adding another pet?</h2>
+                    <p>Keep your other companions' care details close at hand, too.</p>
+                    <a class="auth-prompt-signup" href="./add-pet.html">Add another pet</a>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>

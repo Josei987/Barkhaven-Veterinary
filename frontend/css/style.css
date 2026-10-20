@@ -550,6 +550,55 @@ section.testimonial {
     line-height: 1.6;
 }
 
+.add-pet-success-content {
+    width: min(100%, 780px);
+}
+
+.add-pet-success-content .signup-success-icon {
+    margin-bottom: 1rem;
+}
+
+.add-pet-success-content h1 {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.add-pet-success-prompts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    text-align: left;
+}
+
+.add-pet-success-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+
+.add-pet-success-prompt h2 {
+    margin: 0;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.add-pet-success-prompt p {
+    flex: 1;
+    margin: 0.5rem 0 1.25rem;
+    color: #52645b;
+    line-height: 1.5;
+}
+
+.add-pet-success-prompt a {
+    min-width: 100%;
+    text-align: center;
+}
+
 .auth-prompt-actions {
     display: flex;
     justify-content: center;
@@ -648,10 +697,123 @@ section.testimonial {
     transform: translateX(22px);
 }
 
+.add-pet-page {
+    width: min(100% - 2rem, 860px);
+}
+
+.add-pet-card {
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.pet-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.35rem 1.25rem;
+}
+
+.pet-field {
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+    color: #1f2933;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.pet-field-wide {
+    grid-column: 1 / -1;
+}
+
+.pet-field label {
+    color: #1e302b;
+}
+
+.pet-field label > span[aria-hidden="true"] {
+    color: var(--primary-dark);
+}
+
+.pet-field .optional-label {
+    color: #66736b;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.pet-field input,
+.pet-field select,
+.pet-field textarea {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid #aab8ae;
+    border-radius: 4px;
+    background: #fff;
+    color: #1f2933;
+    font: inherit;
+    font-weight: 400;
+}
+
+.pet-field textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.pet-field input:focus-visible,
+.pet-field select:focus-visible,
+.pet-field textarea:focus-visible {
+    outline: 3px solid rgba(63, 125, 90, 0.3);
+    outline-offset: 2px;
+    border-color: var(--primary);
+}
+
+.pet-field input::placeholder,
+.pet-field textarea::placeholder {
+    color: #7b8780;
+    opacity: 1;
+}
+
+.pet-field select:disabled {
+    background: #f3f3f3;
+    color: #66736b;
+    cursor: not-allowed;
+}
+
+.pet-field small {
+    color: #66736b;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.add-pet-actions {
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
 @media (max-width: 520px) {
     .settings-page {
         width: min(100% - 1.25rem, 760px);
         margin-block: 2rem;
+    }
+
+    .add-pet-page {
+        width: min(100% - 1.25rem, 860px);
+    }
+
+    .pet-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pet-field-wide {
+        grid-column: auto;
+    }
+
+    .add-pet-actions {
+        flex-direction: column-reverse;
+    }
+
+    .add-pet-actions .settings-save,
+    .add-pet-actions .settings-add-animal {
+        width: 100%;
     }
 
     .settings-animals {
@@ -666,6 +828,14 @@ section.testimonial {
 
     .auth-prompt-actions {
         flex-direction: column;
+    }
+
+    .add-pet-success-prompts {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .add-pet-success-prompt {
+        padding: 1.25rem;
     }
 
     .settings-actions {
@@ -735,6 +905,29 @@ body.dark .settings-card .setting label {
     color: #edf2f7;
 }
 
+body.dark .add-pet-card .pet-field,
+body.dark .add-pet-card .pet-field label {
+    color: #edf2f7;
+}
+
+body.dark .add-pet-card .pet-field .optional-label,
+body.dark .add-pet-card .pet-field small {
+    color: #c1ccd6;
+}
+
+body.dark .add-pet-card .pet-field input,
+body.dark .add-pet-card .pet-field select,
+body.dark .add-pet-card .pet-field textarea {
+    border-color: #526579;
+    background: #18232d;
+    color: #edf2f7;
+}
+
+body.dark .add-pet-card .pet-field select:disabled {
+    background: #243442;
+    color: #c1ccd6;
+}
+
 body.dark .settings-card select {
     border-color: #526579;
     background: #18232d;
@@ -754,6 +947,19 @@ body.dark .auth-prompt-eyebrow {
 }
 
 body.dark .auth-prompt-copy {
+    color: #c1ccd6;
+}
+
+body.dark .add-pet-success-prompt {
+    border-color: #405365;
+    background: #243442;
+}
+
+body.dark .add-pet-success-prompt h2 {
+    color: #edf2f7;
+}
+
+body.dark .add-pet-success-prompt p {
     color: #c1ccd6;
 }
 
