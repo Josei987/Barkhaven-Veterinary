@@ -35,9 +35,6 @@ public class User {
     private String phoneNumber;
 
     @Column(nullable = false)
-    private String birthDate;
-
-    @Column(nullable = false)
     private String streetAddress;
 
     @Column(nullable = false)
@@ -102,15 +99,6 @@ public class User {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-    }
-
     
     public String getStreetAddress() {
         return streetAddress;
