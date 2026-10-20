@@ -28,9 +28,9 @@ form.addEventListener('submit', function (event) {
         return res.json();
     })
     .then(() => {
-      successMessage.classList.add('show');
+      successMessage.classList.add('appointment__status--visible');
       form.reset();
-      setTimeout(() => successMessage.classList.remove('show'), 3500);  
+      setTimeout(() => successMessage.classList.remove('appointment__status--visible'), 3500);
     })
     .catch(err => console.error('Booking failed', err));
 })

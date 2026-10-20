@@ -1312,3 +1312,231 @@ section.appointment-prompt {
 }
 
 /* ------------------------------------------- APPOINTMENTS PAGE ------------------------------------------- */
+
+.appointment {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+.appointment__hero {
+    padding: 1rem 0 2rem;
+}
+
+.appointment__hero-copy {
+    max-width: 760px;
+}
+
+.appointment__eyebrow {
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.appointment__title {
+    margin: 0.75rem 0;
+    padding: 0;
+    background: none;
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.appointment__subtitle {
+    max-width: 680px;
+    color: var(--lower-contrast);
+    line-height: 1.6;
+}
+
+.appointment__content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1.5rem;
+}
+
+.appointment__info-panel,
+.appointment__form-panel {
+    padding: 1.5rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.appointment__section-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+}
+
+.appointment__info-list {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.appointment__info-item {
+    display: flex;
+    gap: 0.85rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8e3;
+}
+
+.appointment__info-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.appointment__icon {
+    display: grid;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 0.75rem;
+    background: #edf3ee;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.appointment__info-title {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+}
+
+.appointment__info-description {
+    margin: 0;
+    color: var(--lower-contrast);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.appointment__form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.appointment__field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.appointment__field--full {
+    grid-column: 1 / -1;
+}
+
+.appointment__label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.appointment__control {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid #cbd5ce;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: var(--page-text);
+    font: inherit;
+}
+
+.appointment__control:focus {
+    border-color: var(--primary);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.appointment__control--textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.appointment__add-pet {
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.appointment__submit-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.appointment__status {
+    display: none;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.appointment__status--visible {
+    display: inline;
+}
+
+.appointment__submit-button {
+    padding: 0.8rem 1.25rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.appointment__submit-button:hover {
+    background: var(--primary-dark);
+}
+
+body.dark .appointment__info-panel,
+body.dark .appointment__form-panel {
+    border-color: #405365;
+    background: #243442;
+}
+
+body.dark .appointment__control {
+    border-color: #607386;
+    background: #1d2b36;
+    color: var(--page-text);
+}
+
+@media (max-width: 760px) {
+    .appointment__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .appointment {
+        padding: 1.25rem 1rem 2rem;
+    }
+
+    .appointment__info-panel,
+    .appointment__form-panel {
+        padding: 1.15rem;
+    }
+
+    .appointment__form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment__field--full {
+        grid-column: auto;
+    }
+
+    .appointment__submit-button {
+        width: 100%;
+    }
+}
