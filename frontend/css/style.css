@@ -1746,3 +1746,6 @@ body.dark .appointment__control {
         width: 100%;
     }
 }
+    /* used the BEM naming convention for the class names in the HTML and CSS files. The BEM (Block Element Modifier)
+    methodology is a popular naming convention for classes in HTML and CSS that helps to create reusable components 
+    and code sharing in front-end development. */
