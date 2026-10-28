@@ -60,8 +60,14 @@ public class UserService {
         // return new UserResponseDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getPhoneNumber(), user.getEmail());
     }
 
-    public toDto(getUserId(), getFirstName(), getLastName)(), getPhoneNumber(), getEmail()) {
+    public UserResponseDTO getbyEmail(String email){
+        User user = userRepository.findByEmail(email)
+            .orElseThrow(() -> new InvalidCredentialsException("Account not found."));
+        return toDto(user);
+    }
 
+    public UserResponseDTO toDto(User user){
+        return new UserResponseDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getPhoneNumber(), user.getEmail());
     }
 
 }
