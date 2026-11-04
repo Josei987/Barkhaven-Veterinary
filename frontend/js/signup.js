@@ -27,16 +27,21 @@ const data = {
     emergencyContactNumber: form.elements["emergency-phone"].value,
 };
 
-const response = await fetch("/api/auth/register", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(data)
-})
+    try{
+        const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+    })
 
-.then(res => {
-    if(!res.ok) {
-        return res.json();
+    if(response.status === 201){
+        window.location.href = "./signup-success.html";
+        return;
+    }
+
+    const body = await response.json().catch(() => ({}));
+    errorBox.textContent = body.response || "Could not create your account";
+    } catch(error) {
+    errorBox.textContent = "Could not reach the server. Please try again.";
     }
 })
-
-} )
