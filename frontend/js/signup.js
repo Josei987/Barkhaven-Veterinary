@@ -8,7 +8,7 @@ errorBox.textContent = ''; // clear error message
 
 const password = form.elements["password"].value;
 
-if(password === form.elements["confirm-password"].value) {
+if(password !== form.elements["confirm-password"].value) {
     errorBox.textContent = "password does not match";
     return;
 }
@@ -40,7 +40,7 @@ const data = {
     }
 
     const body = await response.json().catch(() => ({}));
-    errorBox.textContent = body.response || "Could not create your account";
+    errorBox.textContent = body.message || "Could not create your account";
     } catch(error) {
     errorBox.textContent = "Could not reach the server. Please try again.";
     }
