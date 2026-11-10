@@ -10,7 +10,7 @@ form.addEventListener("submit", async function (event) {
         email: form.elements["email"].value,
         password: form.elements["password"].value
     }
-    
+
     try {
         const response = await fetch("/api/auth/login", {
             method: "POST",
