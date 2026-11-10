@@ -12,7 +12,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
-import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.Authentication;
@@ -51,7 +50,7 @@ public class UserController {
         request.getSession(true);
         request.changeSessionId(); //once newly created session is made, we change the session id to a new one. 
 
-        Authentication authenticate = new UsernamePasswordAuthenticationToken(user.getEmail(), null, List.of(new SimpleGrantedAuthority("Role_USER")));
+        Authentication authenticate = new UsernamePasswordAuthenticationToken(user.getEmail(), null, List.of(new SimpleGrantedAuthority("ROLE_USER")));
 
         SecurityContext context = SecurityContextHolder.createEmptyContext();
         context.setAuthentication(authenticate);
