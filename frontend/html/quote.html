@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Get a personalized estimate for your pet's care at Barkhaven Veterinary.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote | Barkhaven Veterinary</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
@@ -26,3 +26,100 @@
             <a href="./signup.html" class="nav-login-bttn">Sign Up</a>
         </nav>
     </header>
+    <main class="quote-page">
+        <section class="quote-hero">
+            <div class="quote-hero__copy">
+                <span class="quote-eyebrow">Thoughtful care, clear costs</span>
+                <h1 class="quote-title">Let’s find the right care for your pet.</h1>
+                <p class="quote-subtitle">
+                    Tell us a little about what your pet needs and we’ll help you understand the services and costs to expect.
+                </p>
+            </div>
+        </section>
+
+        <section class="quote-content" aria-label="Get a veterinary care quote">
+            <aside class="quote-info-panel">
+                <span class="quote-info-panel__label">A simple place to start</span>
+                <h2 class="quote-section-title">A quote that puts your pet first.</h2>
+                <p class="quote-info-panel__intro">
+                    Every pet is different. Doctor Anna can help you explore care options and learn what goes into an estimate. Chat will be available soon.
+                </p>
+
+                <ol class="quote-steps">
+                    <li class="quote-step">
+                        <span class="quote-step__number" aria-hidden="true">1</span>
+                        <div>
+                            <h3>Tell us what’s going on</h3>
+                            <p>Let us know which service you’re interested in and a little about your pet.</p>
+                        </div>
+                    </li>
+                    <li class="quote-step">
+                        <span class="quote-step__number" aria-hidden="true">2</span>
+                        <div>
+                            <h3>Explore your options</h3>
+                            <p>Get a clearer idea of possible services and what may affect the estimate.</p>
+                        </div>
+                    </li>
+                    <li class="quote-step">
+                        <span class="quote-step__number" aria-hidden="true">3</span>
+                        <div>
+                            <h3>Confirm with our team</h3>
+                            <p>We’ll help you connect with the clinic for an accurate, personalized quote.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="quote-note">
+                    <span class="quote-note__icon" aria-hidden="true">♥</span>
+                    <p>For urgent or emergency concerns, please call our clinic directly at <a href="tel:+15551234567">(555) 123-4567</a>.</p>
+                </div>
+            </aside>
+
+            <section class="quote-chat-panel" aria-labelledby="quote-chat-title">
+                <div class="quote-chat-panel__header">
+                    <img class="quote-chat-panel__avatar" src="../assets/images/fe7-annapng.png" alt="Photo of a veterinarian with a dog">
+                    <div class="quote-chat-panel__identity">
+                        <h2 id="quote-chat-title">Chat with Doctor Anna</h2>
+                        <span class="quote-chat-panel__status">
+                            <span class="quote-chat-panel__status-dot" aria-hidden="true"></span>
+                            Not connected yet
+                        </span>
+                    </div>
+                    <span class="quote-chat-panel__badge">Coming soon</span>
+                </div>
+
+                <div class="quote-chat" id="quote-agent-mount" data-agent-mount="doctor-anna" aria-label="Doctor Anna chat">
+                    <div class="quote-chat__date">MEET DOCTOR ANNA</div>
+                    <div class="quote-chat__welcome">
+                        <img class="quote-chat__avatar" src="../assets/images/fe7-annapng.png" alt="Photo of a veterinarian with a dog">
+                        <div class="quote-chat__message">
+                            <p>Doctor Anna is an AI assistant that can help you explore veterinary services and understand what may affect your pet’s care estimate.</p>
+                            <p>She can’t diagnose or replace advice from your veterinarian. Chat with Doctor Anna will be available soon.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-chat__suggestions" aria-label="Example topics">
+                        <span>Wellness visits</span>
+                        <span>Vaccinations</span>
+                        <span>Dental care</span>
+                    </div>
+                </div>
+
+                <form class="quote-composer" aria-label="Chat with Doctor Anna">
+                    <label class="quote-visually-hidden" for="quote-message">Your message to Doctor Anna</label>
+                    <input id="quote-message" type="text" placeholder="Chat with Doctor Anna (coming soon)" disabled aria-describedby="quote-chat-status">
+                    <button type="button" disabled aria-label="Send message">Send</button>
+                </form>
+                <p class="quote-chat-panel__disclaimer" id="quote-chat-status">
+                    Chat is not available yet. For help today, <a href="./contact.html">contact our team</a>.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="quote-footer">
+        <p>&copy; 2026 Barkhaven. All rights reserved.</p>
+    </footer>
+    <script src="../js/theme.js"></script>
+</body>
+</html>
