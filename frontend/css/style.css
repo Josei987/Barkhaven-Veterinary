@@ -1746,6 +1746,529 @@ body.dark .appointment__control {
         width: 100%;
     }
 }
-    /* used the BEM naming convention for the class names in the HTML and CSS files. The BEM (Block Element Modifier)
+
+/* ------------------------------------------- QUOTE PAGE ------------------------------------------- */
+
+.quote-page {
+    padding: 0 0 3rem;
+}
+
+.quote-hero {
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    padding: clamp(3rem, 7vw, 5.5rem) 1.25rem;
+    background: #e8efe9;
+}
+
+.quote-hero__copy {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
+.quote-eyebrow,
+.quote-info-panel__label {
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.quote-title {
+    max-width: 780px;
+    margin: 0.75rem 0 1rem;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.quote-subtitle {
+    max-width: 560px;
+    margin: 0;
+    color: #52645b;
+    line-height: 1.6;
+}
+
+.quote-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: stretch;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    width: min(100% - 2.5rem, 1100px);
+    margin: 2.75rem auto 0;
+}
+
+.quote-chat-panel {
+    min-width: 0;
+    border: 1px solid #d6e0d8;
+    border-radius: 1.25rem;
+    background: #fff;
+}
+
+.quote-info-panel {
+    min-width: 0;
+    padding: 1.5rem 0;
+}
+
+.quote-section-title {
+    margin: 0.55rem 0 0.65rem;
+    color: #1e302b;
+    font-family: 'Instrument-Serif', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.quote-info-panel__intro,
+.quote-step p {
+    color: #64736a;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.quote-info-panel__intro {
+    margin: 0;
+}
+
+.quote-steps {
+    display: grid;
+    position: relative;
+    gap: 1.45rem;
+    margin: 1.75rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.quote-steps::before {
+    position: absolute;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    left: 1.05rem;
+    width: 1px;
+    background: #d6e0d8;
+    content: "";
+}
+
+.quote-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    position: relative;
+}
+
+.quote-step__number {
+    display: grid;
+    flex: 0 0 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #e8efe9;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.quote-step h3 {
+    margin: 0 0 0.2rem;
+    font-size: 0.98rem;
+}
+
+.quote-step p {
+    margin: 0;
+}
+
+.quote-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #f1f5f1;
+}
+
+.quote-note__icon {
+    color: var(--primary-dark);
+}
+
+.quote-note p {
+    margin: 0;
+    color: #52645b;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.quote-note a,
+.quote-chat-panel__disclaimer a {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.quote-chat-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 16px 38px rgba(31, 41, 51, 0.08);
+}
+
+.quote-chat-panel__header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.25rem 1.5rem;
+    background: #1e302b;
+    color: #fff;
+}
+
+.quote-chat-panel__avatar,
+.quote-chat__avatar {
+    display: block;
+    flex: 0 0 2.6rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 76% center;
+}
+
+.quote-chat-panel__identity {
+    min-width: 0;
+}
+
+.quote-chat-panel__identity h2 {
+    margin: 0 0 0.2rem;
+    font-size: 1rem;
+}
+
+.quote-chat-panel__status {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #d3ddd4;
+    font-size: 0.8rem;
+}
+
+.quote-chat-panel__status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #fcc773;
+}
+
+.quote-chat-panel__badge {
+    margin-left: auto;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: #e8efe9;
+    color: #1e302b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.quote-chat {
+    display: flex;
+    min-height: 390px;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    background-color: #e8efe9;
+}
+
+.quote-chat__date {
+    align-self: center;
+    margin: 0 0 1.5rem;
+    padding: 0.4rem 0.65rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #64736a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.quote-chat__welcome {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    max-width: 100%;
+}
+
+.quote-chat__avatar {
+    flex-basis: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.quote-chat__message {
+    max-width: 390px;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e2e8e3;
+    border-radius: 0 0.9rem 0.9rem 0.9rem;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(31, 41, 51, 0.04);
+}
+
+.quote-chat__message p {
+    margin: 0;
+    color: #52645b;
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+.quote-chat__message p + p {
+    margin-top: 0.5rem;
+}
+
+.quote-chat__suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.1rem 0 0 2.65rem;
+}
+
+.quote-chat__suggestions span {
+    padding: 0.4rem 0.65rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 999px;
+    background: #fff;
+    color: #52645b;
+    font-size: 0.75rem;
+}
+
+.quote-composer {
+    display: flex;
+    gap: 0.65rem;
+    padding: 1rem 1.5rem 0;
+}
+
+.quote-composer input {
+    min-width: 0;
+    flex: 1;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #d6e0d8;
+    border-radius: 0.6rem;
+    background: #f3f5f3;
+    color: #64736a;
+    font: inherit;
+}
+
+.quote-composer input:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.quote-composer button {
+    padding: 0.75rem 1rem;
+    border: 0;
+    border-radius: 0.6rem;
+    background: #1e302b;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+}
+
+.quote-composer button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.quote-chat-panel__disclaimer {
+    margin: 0;
+    padding: 0.7rem 1.5rem 1.2rem;
+    color: #64736a;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.quote-footer {
+    padding: 1rem 1.25rem;
+    background: #1e302b;
+    color: #fff;
+    text-align: center;
+}
+
+.quote-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.quote-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body.dark .quote-chat-panel {
+    border-color: #405365;
+    background: #243442;
+}
+
+body.dark .quote-title,
+body.dark .quote-section-title,
+body.dark .quote-step h3,
+body.dark .quote-chat-panel__identity h2 {
+    color: #edf2f7;
+}
+
+body.dark .quote-hero {
+    background: #1e302b;
+}
+
+body.dark .quote-subtitle {
+    color: #c1ccd6;
+}
+
+body.dark .quote-eyebrow,
+body.dark .quote-info-panel__label,
+body.dark .quote-note a,
+body.dark .quote-chat-panel__disclaimer a {
+    color: #a8d4b5;
+}
+
+body.dark .quote-info-panel__intro,
+body.dark .quote-step p,
+body.dark .quote-note p,
+body.dark .quote-chat-panel__status,
+body.dark .quote-chat-panel__disclaimer,
+body.dark .quote-footer {
+    color: #c1ccd6;
+}
+
+body.dark .quote-step__number {
+    border-color: var(--page-background);
+    background: #304b3b;
+    color: #a8d4b5;
+}
+
+body.dark .quote-steps::before {
+    background: #405365;
+}
+
+body.dark .quote-note {
+    background: #304b3b;
+}
+
+body.dark .quote-chat-panel__badge {
+    background: #304b3b;
+    color: #a8d4b5;
+}
+
+body.dark .quote-chat {
+    background-color: #1d2b36;
+}
+
+body.dark .quote-chat__date,
+body.dark .quote-chat__message,
+body.dark .quote-chat__suggestions span {
+    border-color: #405365;
+    background: #243442;
+    color: #c1ccd6;
+}
+
+body.dark .quote-chat__message p {
+    color: #c1ccd6;
+}
+
+body.dark .quote-composer input {
+    border-color: #607386;
+    background: #1d2b36;
+    color: #c1ccd6;
+}
+
+body.dark .quote-composer input::placeholder {
+    color: #c1ccd6;
+}
+
+@media (max-width: 760px) {
+    .quote-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .quote-chat {
+        min-height: 280px;
+    }
+
+    .quote-info-panel {
+        padding: 0.5rem 0 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .quote-page {
+        padding: 0 0 2rem;
+    }
+
+    .quote-hero {
+        min-height: 0;
+        padding: 3rem 1.25rem;
+    }
+
+    .quote-title {
+        font-size: clamp(2.8rem, 13vw, 4rem);
+    }
+
+    .quote-content {
+        width: calc(100% - 2rem);
+        margin-top: 1.75rem;
+    }
+
+    .quote-info-panel {
+        padding: 0.5rem 0 1rem;
+    }
+
+    .quote-chat-panel__header {
+        gap: 0.65rem;
+        padding: 1rem;
+    }
+
+    .quote-chat-panel__avatar {
+        flex-basis: 2.3rem;
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .quote-chat-panel__badge {
+        font-size: 0.65rem;
+    }
+
+    .quote-chat {
+        min-height: 250px;
+        padding: 1rem;
+    }
+
+    .quote-chat__suggestions {
+        margin-left: 0;
+    }
+
+    .quote-composer {
+        padding: 0.8rem 0.8rem 0;
+    }
+
+    .quote-chat-panel__disclaimer {
+        padding: 0.65rem 0.8rem 0.9rem;
+    }
+
+    .quote-footer {
+        padding: 1.25rem 1rem;
+    }
+}
+    /* used the BEM naming convention for the class names in the HTML and CSS files.
     methodology is a popular naming convention for classes in HTML and CSS that helps to create reusable components 
     and code sharing in front-end development. */
