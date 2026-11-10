@@ -194,15 +194,15 @@ h1 {
 @media (max-width: 700px) {
 
     .site-header {
-        min-height: auto; /* auto when !is-menu-open, 100dvh when is-menu-open*/
+        min-height: auto; 
     }
 
     .site-nav {
-        display: none; /*none when !is-menu-open, flex when is-menu-open*/
+        display: none; 
     }
 
     .site-header__actions {
-        display: none; /*none when !is-menu-open, flex when is-menu-open*/
+        display: none; 
     }
 
     .site-header__controls {
@@ -403,7 +403,7 @@ h1 {
 
     .is-menu-open .site-nav__item {
         border-bottom: 1px solid var(--text-light-muted);
-        padding-block: 1rem;
+        
     }
 
     .is-menu-open .item__dropdown {
@@ -419,6 +419,7 @@ h1 {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        padding-block: 1rem;
     }
 }
 
