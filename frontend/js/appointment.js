@@ -1,3 +1,4 @@
+loginRequest("./not-logged-in.html"); // checks this first, if good return email if no, redirect to this
 const form = document.getElementById('appointmentForm');
 const successMessage = document.getElementById('successMessage');
 
