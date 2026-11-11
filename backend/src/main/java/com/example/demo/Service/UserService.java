@@ -22,6 +22,10 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    /** 
+     * @param user
+     * @return UserResponseDTO
+     */
     //creates account and returns to the UserResponseDTO
     public UserResponseDTO createAccount(User user) {
         //checks if the email already exists and throws exception if so
@@ -42,6 +46,10 @@ public class UserService {
         return toDto(userRepository.save(user));
     }
 
+    /** 
+     * @param loginRequestDTO
+     * @return UserResponseDTO
+     */
     //var varName = 
     public UserResponseDTO logIn(LoginRequestDTO loginRequestDTO) {
         //if (userRepository.findByEmail(loginRequestDTO.getEmail())) {
@@ -60,12 +68,20 @@ public class UserService {
         // return new UserResponseDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getPhoneNumber(), user.getEmail());
     }
 
+    /** 
+     * @param email
+     * @return UserResponseDTO
+     */
     public UserResponseDTO getbyEmail(String email){
         User user = userRepository.findByEmail(email)
             .orElseThrow(() -> new InvalidCredentialsException("Account not found."));
         return toDto(user);
     }
 
+    /** 
+     * @param user
+     * @return UserResponseDTO
+     */
     public UserResponseDTO toDto(User user){
         return new UserResponseDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getPhoneNumber(), user.getEmail());
     }
