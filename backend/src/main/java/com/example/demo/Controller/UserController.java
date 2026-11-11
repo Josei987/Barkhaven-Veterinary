@@ -20,20 +20,33 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.security.core.context.SecurityContext;
 import java.util.List;
 
+/**
+ * Controller for handling user authentication-related requests.
+ * UserController
+ */
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins="*")
-
 public class UserController {
     private final UserService userService;
     private final SecurityContextRepository securityContextRepository;
 
+    /**
+     * 
+     * @param userService
+     * @param securityContextRepository
+     */
     public UserController(UserService userService, SecurityContextRepository securityContextRepository) {
         this.userService = userService;
         this.securityContextRepository = securityContextRepository;
         
     }
 
+    /** 
+     * Creates a new user account.
+     * @param user
+     * @return ResponseEntity<UserResponseDTO>
+     */
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> createAccount(@RequestBody User user) {
         UserResponseDTO saved = userService.createAccount(user);
@@ -42,6 +55,13 @@ public class UserController {
 
     }
 
+    /**
+     * Logs in a user.
+     * @param loginRequestDTO
+     * @param request
+     * @param response
+     * @return ResponseEntity<UserResponseDTO>
+     */
     @PostMapping("/login")
     public ResponseEntity<UserResponseDTO> logIn(@RequestBody LoginRequestDTO loginRequestDTO, HttpServletRequest request, HttpServletResponse response) {
         UserResponseDTO user = userService.logIn(loginRequestDTO);
@@ -60,11 +80,21 @@ public class UserController {
 
     }
 
+    /** 
+     * Retrieves the current user's information.
+     * @param authenticate
+     * @return ResponseEntity<UserResponseDTO>
+     */
     @GetMapping("/me")
     public ResponseEntity<UserResponseDTO> findByEmail(Authentication authenticate){
         return ResponseEntity.ok(userService.getbyEmail(authenticate.getName()));
     }
 
+    /** 
+     * Logs out the current user.
+     * @param request
+     * @return ResponseEntity<UserResponseDTO>
+     */
     @PostMapping("/logout")
     public ResponseEntity<UserResponseDTO> logOut(HttpServletRequest request){
         HttpSession session = request.getSession(false);
