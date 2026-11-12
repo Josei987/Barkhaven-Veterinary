@@ -11,15 +11,25 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.security.web.context.SecurityContextRepository;
 
-
+/**
+ * Handles Security for the website.
+ */
 @Configuration
 public class SecurityConfig {
 
+    /**
+     *
+     * @return SecurityContextRepository
+     */
     @Bean 
     public SecurityContextRepository securityContextRepository() {
         return new HttpSessionSecurityContextRepository();
     }
 
+    /**
+     * Encrypts passwords.
+     * @return PasswordEncoder
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
 
@@ -27,6 +37,13 @@ public class SecurityConfig {
 
     }
 
+    /**
+     *
+     * @param http
+     * @param securityContextRepository
+     * @return SecurityFilterChain
+     * @throws Exception
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, SecurityContextRepository securityContextRepository) throws Exception {
         http
