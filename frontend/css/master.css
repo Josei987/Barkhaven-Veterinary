@@ -225,18 +225,31 @@ h1 {
     }
 }
 
-.hero {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.hero--home {
+    --hero-shade: 0.5;
+    --hero-pos: 65% center;
+    --hero-scale: 1.3;
+    --hero-shift: -3%, 0;
+
+    position: relative;
+    isolation: isolate;         /* keeps ::before's z-index inside the hero */
+    overflow: hidden;
+    background: none;           /* image lives on ::before */
+    color: var(--text-light);
 }
 
-.hero--home {
-    background-position: 55% center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0)),url('../assets/images/hero-image.jpg');
-    color: white;
-    display: flex;
-    justify-content: center;
+.hero--home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(to top, rgb(0 0 0 / var(--hero-shade)), transparent),
+        url('../assets/images/hero-image-expanded.jpg');
+    background-size: cover;
+    background-position: var(--hero-pos);
+    transform: scale(var(--hero-scale)) translate(var(--hero-shift));   /* zoom, then nudge */
+    transform-origin: center bottom;
 }
 
 .hero__content {
@@ -254,7 +267,7 @@ h1 {
 }
 
 .hero__title {
-    font-size: clamp(3rem, 3.5vw, 5rem);
+    font-size: clamp(2.75rem, 5vw, 4rem);
     margin: 0;
 }
 
@@ -262,6 +275,27 @@ h1 {
     color: var(--text-light-muted);
     font-size: clamp(1rem, 1.75vw, 1.25rem);
     margin: 0;
+}
+
+/* Tablet: slightly less zoom, darker shade */
+@media (max-width: 1439px) {
+    .hero--home {
+        --hero-shade: 0.6;
+        --hero-scale: 1.2;
+        --hero-shift: 1%, 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .hero__content {
+        padding-top: 8rem;
+    }
+    .hero--home {
+        --hero-pos: 67% center;
+        --hero-scale: 1.1;
+        --hero-shift: 0, 8%;
+    }
 }
 
 .btn {
@@ -277,7 +311,7 @@ h1 {
 }
 
 .btn--accent {
-    background-color: var(--btn-accent-bg, var(--accent)); /*inherit value first, fallback on default*/
+    background-color: var(--btn-accent-bg, var(--accent));
     color: var(--btn-accent-text, var(--text));
 }
 
@@ -308,7 +342,7 @@ h1 {
 }
 
 .btn--hero {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
     font-weight: bold;
 }
 
@@ -352,7 +386,7 @@ h1 {
         --btn-black-text: var(--text-light);
 
         --btn-outline-bg: transparent;
-        --btn-outline: 1px solid currentColor;
+        --btn-outline: 2px solid currentColor;
 
         --btn-transparent-text: var(--text);
     }
@@ -403,7 +437,6 @@ h1 {
 
     .is-menu-open .site-nav__item {
         border-bottom: 1px solid var(--text-light-muted);
-        
     }
 
     .is-menu-open .item__dropdown {
@@ -432,7 +465,7 @@ h1 {
     --btn-black-text: var(--text-light);
 
     --btn-outline-bg: transparent;
-    --btn-outline: 1px solid currentColor;
+    --btn-outline: 2px solid currentColor;
 }
 
 
