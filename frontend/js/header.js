@@ -9,7 +9,8 @@ const options = {
 header.addEventListener("click", (e) => {
     const toggleBtn = e.target.closest(".menu-toggle");
     if (toggleBtn){
-        header.classList.toggle("is-menu-open");
+        const isOpen = header.classList.toggle("is-menu-open");
+        toggleBtn.setAttribute("aria-expanded", String(isOpen));
     }
 })
 

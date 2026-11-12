@@ -5,15 +5,9 @@ navbar.addEventListener("click", (e) => {
     const toggleBtn = e.target.closest(".site-nav__dropdown-toggle");
     
     if (toggleBtn) {
-        toggleBtn.nextElementSibling.classList.toggle("is-hidden");
-        switch (toggleBtn.getAttribute("aria-expanded")){
-            case "true":
-                toggleBtn.setAttribute("aria-expanded", "false");
-                break;
-            case "false":
-                toggleBtn.setAttribute("aria-expanded", "true");
-                break;
-        }
+        const isOpen = toggleBtn.getAttribute("aria-expanded") !== "true";
+        toggleBtn.setAttribute("aria-expanded", String(isOpen));
+        toggleBtn.nextElementSibling.classList.toggle("is-hidden", !isOpen);
     }
 
 })
