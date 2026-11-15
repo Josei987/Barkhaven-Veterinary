@@ -29,23 +29,48 @@
                             aria-controls="services-dropdown">
                             <span>Services</span><span> + </span>
                         </button>
-                        <div class="item__dropdown is-hidden" id="services-dropdown">
-                            <div class="dropdown__content l-container">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illum fugit, pariatur reiciendis libero voluptate voluptates cupiditate inventore magnam repudiandae ut quo ipsa quasi rem doloribus laboriosam enim nisi temporibus?
+                        <div class="site-nav__dropdown is-hidden" id="services-dropdown">
+                            <div class="site-nav__dropdown-content l-container">
+                                <div class="card card--spread">
+                                    <div class="card__content">
+                                        <p class="card__title">In-clinic Care</p>
+                                        <ul class="card__text card__list card__list--columns">
+                                            <li><a>Preventative Care</a></li>
+                                            <li><a>Surgery</a></li>
+                                            <li><a>Pet Dentistry</a></li>
+                                            <li><a>Diagnostics & Imaging</a></li>
+                                            <li><a>Urgent Care</a></li>
+                                            <li><a>Technician Visits</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a class="btn btn--sm btn--primary-dark" href="./appointment.html">Book now</a>
+                                        <a class="btn btn--sm btn--transparent">Learn more →</a> 
+                                    </div>
+                                </div>
+                                <div class="card card--spread">
+                                    <div class="card__content">
+                                        <p class="card__title">Prescriptions</p>
+                                        <p class="card__text">Description text about the prescription service, keep it short</p>
+                                    </div>
+                                    
+                                    <div class="btn-group">
+                                        <a class="btn btn--sm btn--primary-dark">Refill</a>
+                                        <a class="btn btn--sm btn--outline" href="./appointment.html">Book consult</a>
+                                    </div>  
+                                </div>
+                                <div class="card card--spread">
+                                    <div class="card__content">
+                                        <p class="card__title">Anna - AI Assistant & Estimator</p>
+                                        <img>
+                                        <p class="card__text">Describe your pet's needs and get a ballpark quote in seconds.</p>
+                                    </div>
+                                    
+                                    <div class="btn-group">
+                                        <a class="btn btn--sm btn--primary-dark" href="./quote.html">Try it now</a>
+                                        <a class="btn btn--sm btn--transparent">Learn more →</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -55,8 +80,10 @@
                 </ul>
             </nav>
             <div class="site-header__actions">
-                <a href="./login.html" class="btn btn--outline btn--header">Login</a>
-                <a href="./signup.html" class="btn btn--header btn--black">Sign up</a>
+                <div class="btn-group">
+                    <a href="./login.html" class="btn btn--outline btn--sm">Login</a>
+                    <a href="./signup.html" class="btn btn--sm btn--dark">Sign up</a>
+                </div>
             </div>
             <div class="site-header__controls">
                 <button
@@ -82,7 +109,7 @@
                         Providing the best care for your furry friends
                     </p>    
                 </div>
-                <a href="./signup.html" class="btn btn--hero btn--accent">Sign Up</a>  
+                <a href="./signup.html" class="btn btn--lg btn--accent">Sign Up</a>  
             </div>
         </section>
         <section class="service-info">
