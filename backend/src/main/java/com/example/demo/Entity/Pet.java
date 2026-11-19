@@ -5,6 +5,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.FetchType;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -19,13 +22,9 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long petId;
 
-    @ManytoOne(fetch = FetchType.LAZY, optional = false) // won't fill in until rest is done
-    @JoinColumn(name = "firstName", nullable = false) // linking to user table and grabbing the owner name
-    private User ownerName;
-
-    @ManytoOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "userId", nullable = false)
-    private User ownerId;
+    private User owner;
 
     @Column (nullable = false)
     private String petName;
