@@ -28,4 +28,8 @@ public class PetController {
         return ResponseEntity.status(HttpStatus.CREATED).body(petService.addPet(petRequestDTO, auth.getName()));
     }
     
+    @GetMapping 
+    public List<PetResponseDTO> getPets(Authentication auth){
+        return petService.getMyPet(auth.getName());
+    }
 }
