@@ -2,6 +2,7 @@ package com.example.demo.Service;
 
 import com.example.demo.Entity.User;
 import com.example.demo.Entity.Pet;
+import com.example.demo.Repository.UserRepository;
 import com.example.demo.Repository.PetRepository;
 import com.example.demo.Dto.PetRequestDTO;
 import com.example.demo.Dto.PetResponseDTO;
@@ -10,40 +11,54 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PetService {
+    
+    private final UserRepository userRepository;
+    private final PetRepository petRepository;
 
-    public PetService(PetRepository petRepository) {
+    public PetService(PetRepository petRepository, UserRepository userRepository) {
 
         this.petRepository = petRepository;
+        this.userRepository = userRepository;
 
     }
 
-    public PetResponseDTO addPet(PetRequestDTO petRequestDTO) {
+    public PetResponseDTO addPet(PetRequestDTO petRequestDTO, String ownerEmail) {
 
-        User owner = petRepository.findByOwnerEmail(String email).orElseThrow();
+        User owner = userRepository.findByEmail(ownerEmail).orElseThrow();
 
-        Pet pet = new Pet;
+        Pet pet = new Pet();
 
+        pet.setOwner(owner);
+        
         pet.setPetName(petRequestDTO.getPetName());
 
-        pet.setPetAge(petRequestDTO.getAge());
+        pet.setAge(petRequestDTO.getAge());
 
-        pet.setPetWeight(petRequestDTO.getWeight());
+        pet.setWeight(petRequestDTO.getWeight());
 
-        pet.setPetSpecies(petRequestDTO.getSpecies());
+        pet.setSpecies(petRequestDTO.getSpecies());
 
-        pet.setPetBreed(petRequestDTO.getBreed());
+        pet.setBreed(petRequestDTO.getBreed());
 
-        pet.setPetGender(petRequestDTO.getGender());
+        pet.setGender(petRequestDTO.getGender());
 
-        pet.setPetSpayedOrNeutered(petRequestDTO.getSpayedOrNeutered());
+        pet.setSpayedOrNeutered(petRequestDTO.getSpayedOrNeutered());
 
-        pet.setPetPriorConditions(petRequestDTO.getPriorConditions());
+        pet.setPriorConditions(petRequestDTO.getPriorConditions());
 
-        pet.setPetMedications(petRequestDTO.getMedications());
+        pet.setMedications(petRequestDTO.getMedications());
 
-        pet.setPetNotes(petRequestDTO.getNotes());
+        pet.setNotes(petRequestDTO.getNotes());
 
-        return new PetResponseDTO(petRepository.save(pet.getPetId(), pet.getPetName(), pet.getAge(), pet.getWeight(), pet.getSpecies(), pet.getBreed(), pet.getGender(), pet.getSpayedOrNeutered(), pet.getPriorConditions(), pet.getNotes()));
+        Pet saved = petRepository.save(pet);
+        return new PetResponseDTO(saved.getPetId(), saved.getPetName(), saved.getAge(), saved.getWeight(), saved.getSpecies(), saved.getBreed(), saved.getGender(), saved.getSpayedOrNeutered(), saved.getPriorConditions(), saved.getMedications(), saved.getNotes());
 
     }
+
+    public List<PetResponseDTO> getMyPet(String ownerEmail) {
+        //finsd the owner's pet through the findByOwnerEmail method and stores all of it as a list. 
+        return petRepository.findByOwnerEmail(ownerEmail).stream()
+            .map(p -> new PetResponseDTO(p.getPetId(), p.getPetName(), p.getAge(), p.getWeight(), p.getSpecies(), p.getBreed(), p.getGender(), p.getSpayedOrNeutered(), p.getPriorConditions(), p.getMedications(), p.getNotes()))
+            .toList();
+    } 
 }
